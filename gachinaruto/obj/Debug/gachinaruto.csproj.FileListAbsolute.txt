@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\gachinaruto\gachinaruto\bin\Debug\gachinaruto.exe.config
+C:\Users\user\source\repos\gachinaruto\gachinaruto\bin\Debug\gachinaruto.exe
+C:\Users\user\source\repos\gachinaruto\gachinaruto\bin\Debug\gachinaruto.pdb
+C:\Users\user\source\repos\gachinaruto\gachinaruto\obj\Debug\gachinaruto.csprojAssemblyReference.cache
+C:\Users\user\source\repos\gachinaruto\gachinaruto\obj\Debug\gachinaruto.Form1.resources
+C:\Users\user\source\repos\gachinaruto\gachinaruto\obj\Debug\gachinaruto.Properties.Resources.resources
+C:\Users\user\source\repos\gachinaruto\gachinaruto\obj\Debug\gachinaruto.csproj.GenerateResource.cache
+C:\Users\user\source\repos\gachinaruto\gachinaruto\obj\Debug\gachinaruto.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\gachinaruto\gachinaruto\obj\Debug\gachinaruto.exe
+C:\Users\user\source\repos\gachinaruto\gachinaruto\obj\Debug\gachinaruto.pdb
