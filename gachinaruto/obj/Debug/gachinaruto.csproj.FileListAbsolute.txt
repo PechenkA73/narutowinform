@@ -8,3 +8,4 @@ C:\Users\user\source\repos\gachinaruto\gachinaruto\obj\Debug\gachinaruto.csproj.
 C:\Users\user\source\repos\gachinaruto\gachinaruto\obj\Debug\gachinaruto.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\gachinaruto\gachinaruto\obj\Debug\gachinaruto.exe
 C:\Users\user\source\repos\gachinaruto\gachinaruto\obj\Debug\gachinaruto.pdb
+C:\Users\user\source\repos\gachinaruto\gachinaruto\obj\Debug\gachinaruto.PersonForm.resources

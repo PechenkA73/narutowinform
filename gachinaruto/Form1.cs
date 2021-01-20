@@ -51,6 +51,26 @@ namespace gachinaruto
             panel4.Visible = (filterclan.GetItemCheckState(4) == CheckState.Checked || 
                 filterfrom.GetItemCheckState(0) == CheckState.Checked ||
                 filterprofession.GetItemCheckState(0) == CheckState.Checked);
+            panel5.Visible = (filterfrom.GetItemCheckState(0) == CheckState.Checked ||
+                filterprofession.GetItemCheckState(0) == CheckState.Checked);
+        }
+
+        private void narutoClick(object sender, EventArgs e)
+        {
+            PersonForm pf = new PersonForm("Наруто Узумаки");
+            pf.Show();
+        }
+
+        private void sasukeClick(object sender, EventArgs e)
+        {
+            PersonForm pf = new PersonForm("Саске Учиха");
+            pf.Show();
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

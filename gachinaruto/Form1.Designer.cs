@@ -53,6 +53,13 @@ namespace gachinaruto
             this.narutouzumakipic = new System.Windows.Forms.PictureBox();
             this.narutouzumakilabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.panel1.SuspendLayout();
@@ -62,14 +69,20 @@ namespace gachinaruto
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.narutouzumakipic)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(2, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(290, 147);
+            this.pictureBox2.Size = new System.Drawing.Size(247, 120);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -77,39 +90,43 @@ namespace gachinaruto
             // herosearch
             // 
             this.herosearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.herosearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.herosearch.Location = new System.Drawing.Point(627, 68);
+            this.herosearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.herosearch.Location = new System.Drawing.Point(658, 75);
+            this.herosearch.Margin = new System.Windows.Forms.Padding(4);
             this.herosearch.Name = "herosearch";
-            this.herosearch.Size = new System.Drawing.Size(222, 49);
+            this.herosearch.Size = new System.Drawing.Size(200, 38);
             this.herosearch.TabIndex = 2;
             this.herosearch.Text = "Поиск";
             this.herosearch.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(308, 68);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.textBox1.Location = new System.Drawing.Point(294, 75);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 49);
+            this.textBox1.Size = new System.Drawing.Size(336, 38);
             this.textBox1.TabIndex = 3;
             // 
             // naitipersonaja
             // 
             this.naitipersonaja.AutoSize = true;
-            this.naitipersonaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.naitipersonaja.Location = new System.Drawing.Point(303, 31);
+            this.naitipersonaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.naitipersonaja.Location = new System.Drawing.Point(289, 46);
+            this.naitipersonaja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.naitipersonaja.Name = "naitipersonaja";
-            this.naitipersonaja.Size = new System.Drawing.Size(195, 25);
+            this.naitipersonaja.Size = new System.Drawing.Size(182, 25);
             this.naitipersonaja.TabIndex = 4;
             this.naitipersonaja.Text = "Найти персонажа:";
             // 
             // privetusername
             // 
             this.privetusername.AutoSize = true;
-            this.privetusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.privetusername.Location = new System.Drawing.Point(942, 86);
+            this.privetusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.privetusername.Location = new System.Drawing.Point(943, 88);
+            this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(197, 25);
+            this.privetusername.Size = new System.Drawing.Size(184, 25);
             this.privetusername.TabIndex = 5;
             this.privetusername.Text = "Привет, username!";
             // 
@@ -117,9 +134,10 @@ namespace gachinaruto
             // 
             this.userpicture.Image = ((System.Drawing.Image)(resources.GetObject("userpicture.Image")));
             this.userpicture.InitialImage = null;
-            this.userpicture.Location = new System.Drawing.Point(1145, 25);
+            this.userpicture.Location = new System.Drawing.Point(1135, 40);
+            this.userpicture.Margin = new System.Windows.Forms.Padding(4);
             this.userpicture.Name = "userpicture";
-            this.userpicture.Size = new System.Drawing.Size(88, 86);
+            this.userpicture.Size = new System.Drawing.Size(78, 73);
             this.userpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.userpicture.TabIndex = 6;
             this.userpicture.TabStop = false;
@@ -140,19 +158,21 @@ namespace gachinaruto
             "Инузука",
             "Казекаге",
             "Ооцуцуки"});
-            this.filterclan.Location = new System.Drawing.Point(993, 209);
+            this.filterclan.Location = new System.Drawing.Point(0, 23);
+            this.filterclan.Margin = new System.Windows.Forms.Padding(4);
             this.filterclan.Name = "filterclan";
-            this.filterclan.Size = new System.Drawing.Size(240, 89);
+            this.filterclan.Size = new System.Drawing.Size(229, 109);
             this.filterclan.TabIndex = 7;
             this.filterclan.SelectedIndexChanged += new System.EventHandler(this.filterclan_SelectedIndexChanged);
             // 
             // labelclan
             // 
             this.labelclan.AutoSize = true;
-            this.labelclan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelclan.Location = new System.Drawing.Point(989, 186);
+            this.labelclan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelclan.Location = new System.Drawing.Point(-4, 0);
+            this.labelclan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelclan.Name = "labelclan";
-            this.labelclan.Size = new System.Drawing.Size(51, 20);
+            this.labelclan.Size = new System.Drawing.Size(55, 20);
             this.labelclan.TabIndex = 8;
             this.labelclan.Text = "Клан:";
             this.labelclan.Click += new System.EventHandler(this.labelclan_Click);
@@ -160,17 +180,18 @@ namespace gachinaruto
             // lablefrom
             // 
             this.lablefrom.AutoSize = true;
-            this.lablefrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lablefrom.Location = new System.Drawing.Point(989, 301);
+            this.lablefrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lablefrom.Location = new System.Drawing.Point(-4, 136);
+            this.lablefrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lablefrom.Name = "lablefrom";
-            this.lablefrom.Size = new System.Drawing.Size(146, 20);
+            this.lablefrom.Size = new System.Drawing.Size(160, 20);
             this.lablefrom.TabIndex = 9;
             this.lablefrom.Text = "Принадлежность:";
             // 
             // filterfrom
             // 
             this.filterfrom.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.filterfrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.filterfrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.filterfrom.FormattingEnabled = true;
             this.filterfrom.Items.AddRange(new object[] {
             "Деревня Скрытого Листа",
@@ -179,18 +200,20 @@ namespace gachinaruto
             "Деревня Скрытого Водопада",
             "Деревня Скрытого Дождя",
             "Акацуки"});
-            this.filterfrom.Location = new System.Drawing.Point(993, 324);
+            this.filterfrom.Location = new System.Drawing.Point(0, 160);
+            this.filterfrom.Margin = new System.Windows.Forms.Padding(4);
             this.filterfrom.Name = "filterfrom";
-            this.filterfrom.Size = new System.Drawing.Size(240, 89);
+            this.filterfrom.Size = new System.Drawing.Size(229, 112);
             this.filterfrom.TabIndex = 10;
             // 
             // labelprofession
             // 
             this.labelprofession.AutoSize = true;
-            this.labelprofession.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelprofession.Location = new System.Drawing.Point(989, 416);
+            this.labelprofession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelprofession.Location = new System.Drawing.Point(-4, 279);
+            this.labelprofession.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelprofession.Name = "labelprofession";
-            this.labelprofession.Size = new System.Drawing.Size(101, 20);
+            this.labelprofession.Size = new System.Drawing.Size(111, 20);
             this.labelprofession.TabIndex = 11;
             this.labelprofession.Text = "Профессия:";
             // 
@@ -209,32 +232,38 @@ namespace gachinaruto
             "Генин",
             "Джоунин",
             "Специальный Джоунин"});
-            this.filterprofession.Location = new System.Drawing.Point(993, 439);
+            this.filterprofession.Location = new System.Drawing.Point(0, 303);
+            this.filterprofession.Margin = new System.Windows.Forms.Padding(4);
             this.filterprofession.Name = "filterprofession";
-            this.filterprofession.Size = new System.Drawing.Size(240, 89);
+            this.filterprofession.Size = new System.Drawing.Size(229, 109);
             this.filterprofession.TabIndex = 12;
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.panel1.Location = new System.Drawing.Point(6, 164);
+            this.panel1.Location = new System.Drawing.Point(13, 147);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(977, 505);
+            this.panel1.Size = new System.Drawing.Size(1004, 519);
             this.panel1.TabIndex = 13;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(670, 22);
+            this.panel4.Location = new System.Drawing.Point(518, 23);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(275, 293);
+            this.panel4.Size = new System.Drawing.Size(196, 234);
             this.panel4.TabIndex = 3;
             // 
             // pictureBox3
@@ -243,9 +272,10 @@ namespace gachinaruto
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Padding = new System.Windows.Forms.Padding(3);
-            this.pictureBox3.Size = new System.Drawing.Size(273, 271);
+            this.pictureBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Size = new System.Drawing.Size(194, 207);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -253,9 +283,10 @@ namespace gachinaruto
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Location = new System.Drawing.Point(0, 271);
+            this.label2.Location = new System.Drawing.Point(0, 207);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(273, 20);
+            this.label2.Size = new System.Drawing.Size(194, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Какаши Хатаке";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -265,9 +296,10 @@ namespace gachinaruto
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(350, 20);
+            this.panel3.Location = new System.Drawing.Point(280, 24);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(275, 293);
+            this.panel3.Size = new System.Drawing.Size(196, 234);
             this.panel3.TabIndex = 3;
             // 
             // pictureBox1
@@ -276,19 +308,22 @@ namespace gachinaruto
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(3);
-            this.pictureBox1.Size = new System.Drawing.Size(273, 271);
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Size = new System.Drawing.Size(194, 207);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.sasukeClick);
             // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Location = new System.Drawing.Point(0, 271);
+            this.label1.Location = new System.Drawing.Point(0, 207);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 20);
+            this.label1.Size = new System.Drawing.Size(194, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Саске Учиха";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -298,9 +333,10 @@ namespace gachinaruto
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.narutouzumakipic);
             this.panel2.Controls.Add(this.narutouzumakilabel);
-            this.panel2.Location = new System.Drawing.Point(30, 20);
+            this.panel2.Location = new System.Drawing.Point(40, 25);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(275, 293);
+            this.panel2.Size = new System.Drawing.Size(196, 234);
             this.panel2.TabIndex = 2;
             // 
             // narutouzumakipic
@@ -309,56 +345,145 @@ namespace gachinaruto
             this.narutouzumakipic.Dock = System.Windows.Forms.DockStyle.Fill;
             this.narutouzumakipic.Image = ((System.Drawing.Image)(resources.GetObject("narutouzumakipic.Image")));
             this.narutouzumakipic.Location = new System.Drawing.Point(0, 0);
+            this.narutouzumakipic.Margin = new System.Windows.Forms.Padding(4);
             this.narutouzumakipic.Name = "narutouzumakipic";
-            this.narutouzumakipic.Padding = new System.Windows.Forms.Padding(3);
-            this.narutouzumakipic.Size = new System.Drawing.Size(273, 271);
+            this.narutouzumakipic.Padding = new System.Windows.Forms.Padding(4);
+            this.narutouzumakipic.Size = new System.Drawing.Size(194, 207);
             this.narutouzumakipic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.narutouzumakipic.TabIndex = 0;
             this.narutouzumakipic.TabStop = false;
+            this.narutouzumakipic.Click += new System.EventHandler(this.narutoClick);
             // 
             // narutouzumakilabel
             // 
             this.narutouzumakilabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.narutouzumakilabel.Location = new System.Drawing.Point(0, 271);
+            this.narutouzumakilabel.Location = new System.Drawing.Point(0, 207);
+            this.narutouzumakilabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.narutouzumakilabel.Name = "narutouzumakilabel";
-            this.narutouzumakilabel.Size = new System.Drawing.Size(273, 20);
+            this.narutouzumakilabel.Size = new System.Drawing.Size(194, 25);
             this.narutouzumakilabel.TabIndex = 1;
             this.narutouzumakilabel.Text = "Наруто Узумаки";
             this.narutouzumakilabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.narutouzumakilabel.Click += new System.EventHandler(this.label1_Click);
+            this.narutouzumakilabel.Click += new System.EventHandler(this.narutoClick);
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(993, 545);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Location = new System.Drawing.Point(42, 420);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 53);
+            this.button1.Size = new System.Drawing.Size(154, 25);
             this.button1.TabIndex = 14;
             this.button1.Text = "Применить";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.pictureBox4);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Location = new System.Drawing.Point(-1, -1);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(196, 234);
+            this.panel5.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label3.Location = new System.Drawing.Point(0, 207);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(194, 25);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Какаши Хатаке";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Size = new System.Drawing.Size(194, 207);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.pictureBox5);
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Location = new System.Drawing.Point(757, 24);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(196, 234);
+            this.panel6.TabIndex = 4;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Padding = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Size = new System.Drawing.Size(194, 207);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label4.Location = new System.Drawing.Point(0, 207);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(194, 25);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Минато Намиказе";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.button1);
+            this.panel7.Controls.Add(this.labelclan);
+            this.panel7.Controls.Add(this.filterprofession);
+            this.panel7.Controls.Add(this.filterclan);
+            this.panel7.Controls.Add(this.filterfrom);
+            this.panel7.Controls.Add(this.lablefrom);
+            this.panel7.Controls.Add(this.labelprofession);
+            this.panel7.Location = new System.Drawing.Point(1030, 147);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(233, 519);
+            this.panel7.TabIndex = 15;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.filterprofession);
-            this.Controls.Add(this.labelprofession);
-            this.Controls.Add(this.filterfrom);
-            this.Controls.Add(this.lablefrom);
-            this.Controls.Add(this.labelclan);
-            this.Controls.Add(this.filterclan);
             this.Controls.Add(this.userpicture);
             this.Controls.Add(this.privetusername);
             this.Controls.Add(this.naitipersonaja);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.herosearch);
             this.Controls.Add(this.pictureBox2);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(1703, 805);
+            this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "Form1";
             this.Text = "mainpage";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -371,6 +496,12 @@ namespace gachinaruto
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.narutouzumakipic)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,6 +532,13 @@ namespace gachinaruto
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel7;
     }
 }
 
