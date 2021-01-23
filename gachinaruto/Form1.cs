@@ -68,6 +68,20 @@ namespace gachinaruto
 
         }
 
+        private void kakashiClick(object sender, EventArgs e)
+        {
+            PersonForm pf = new PersonForm("Какаши Хатаке");
+            pf.Show();
+
+        }
+
+        private void minatoClick(object sender, EventArgs e)
+        {
+            PersonForm pf = new PersonForm("Минато Намиказе");
+            pf.Show();
+
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
