@@ -51,8 +51,11 @@ namespace gachinaruto
             panel4.Visible = (filterclan.GetItemCheckState(4) == CheckState.Checked || 
                 filterfrom.GetItemCheckState(0) == CheckState.Checked ||
                 filterprofession.GetItemCheckState(0) == CheckState.Checked);
-            panel5.Visible = (filterfrom.GetItemCheckState(0) == CheckState.Checked ||
+            panel6.Visible = (filterfrom.GetItemCheckState(0) == CheckState.Checked ||
                 filterprofession.GetItemCheckState(0) == CheckState.Checked);
+            panel8.Visible = (filterclan.GetItemCheckState(0) == CheckState.Checked ||
+                filterfrom.GetItemCheckState(0) == CheckState.Checked ||
+                filterfrom.GetItemCheckState(5) == CheckState.Checked);
         }
 
         private void narutoClick(object sender, EventArgs e)
@@ -65,26 +68,29 @@ namespace gachinaruto
         {
             PersonForm pf = new PersonForm("Саске Учиха");
             pf.Show();
-
         }
 
         private void kakashiClick(object sender, EventArgs e)
         {
             PersonForm pf = new PersonForm("Какаши Хатаке");
             pf.Show();
-
         }
 
         private void minatoClick(object sender, EventArgs e)
         {
             PersonForm pf = new PersonForm("Минато Намиказе");
             pf.Show();
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ItachiClick(object sender, EventArgs e)
+        {
+            PersonForm pf = new PersonForm("Итачи Учиха");
+            pf.Show();
         }
     }
 }

@@ -60,6 +60,10 @@ namespace gachinaruto
             this.narutouzumakilabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.panel1.SuspendLayout();
@@ -74,6 +78,9 @@ namespace gachinaruto
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.narutouzumakipic)).BeginInit();
             this.panel7.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -90,29 +97,32 @@ namespace gachinaruto
             // herosearch
             // 
             this.herosearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.herosearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.herosearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.herosearch.Location = new System.Drawing.Point(658, 75);
+            this.herosearch.Location = new System.Drawing.Point(358, 4);
             this.herosearch.Margin = new System.Windows.Forms.Padding(4);
             this.herosearch.Name = "herosearch";
-            this.herosearch.Size = new System.Drawing.Size(200, 38);
+            this.herosearch.Size = new System.Drawing.Size(143, 31);
             this.herosearch.TabIndex = 2;
             this.herosearch.Text = "Поиск";
             this.herosearch.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.textBox1.Location = new System.Drawing.Point(294, 75);
+            this.textBox1.Location = new System.Drawing.Point(4, 4);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(336, 38);
+            this.textBox1.Size = new System.Drawing.Size(346, 31);
             this.textBox1.TabIndex = 3;
             // 
             // naitipersonaja
             // 
             this.naitipersonaja.AutoSize = true;
             this.naitipersonaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.naitipersonaja.Location = new System.Drawing.Point(289, 46);
+            this.naitipersonaja.Location = new System.Drawing.Point(293, 40);
             this.naitipersonaja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.naitipersonaja.Name = "naitipersonaja";
             this.naitipersonaja.Size = new System.Drawing.Size(182, 25);
@@ -242,6 +252,7 @@ namespace gachinaruto
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
@@ -259,7 +270,7 @@ namespace gachinaruto
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.pictureBox5);
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Location = new System.Drawing.Point(757, 24);
+            this.panel6.Location = new System.Drawing.Point(757, 13);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(196, 234);
@@ -297,7 +308,7 @@ namespace gachinaruto
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(518, 23);
+            this.panel4.Location = new System.Drawing.Point(518, 12);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(196, 234);
@@ -370,7 +381,7 @@ namespace gachinaruto
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(280, 24);
+            this.panel3.Location = new System.Drawing.Point(280, 13);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(196, 234);
@@ -407,7 +418,7 @@ namespace gachinaruto
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.narutouzumakipic);
             this.panel2.Controls.Add(this.narutouzumakilabel);
-            this.panel2.Location = new System.Drawing.Point(40, 25);
+            this.panel2.Location = new System.Drawing.Point(40, 14);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(196, 234);
@@ -470,18 +481,68 @@ namespace gachinaruto
             this.panel7.Size = new System.Drawing.Size(233, 519);
             this.panel7.TabIndex = 15;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.29703F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.70297F));
+            this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.herosearch, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(294, 74);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(505, 39);
+            this.tableLayoutPanel1.TabIndex = 16;
+            // 
+            // panel8
+            // 
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.pictureBox6);
+            this.panel8.Controls.Add(this.label5);
+            this.panel8.Location = new System.Drawing.Point(40, 266);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(196, 234);
+            this.panel8.TabIndex = 5;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Padding = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Size = new System.Drawing.Size(194, 207);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.ItachiClick);
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label5.Location = new System.Drawing.Point(0, 207);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(194, 25);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Итачи Учиха";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.userpicture);
             this.Controls.Add(this.privetusername);
             this.Controls.Add(this.naitipersonaja);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.herosearch);
             this.Controls.Add(this.pictureBox2);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1703, 805);
@@ -504,6 +565,10 @@ namespace gachinaruto
             ((System.ComponentModel.ISupportInitialize)(this.narutouzumakipic)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,6 +606,10 @@ namespace gachinaruto
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label5;
     }
 }
 
