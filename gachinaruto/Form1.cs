@@ -57,40 +57,20 @@ namespace gachinaruto
                 filterfrom.GetItemCheckState(0) == CheckState.Checked ||
                 filterfrom.GetItemCheckState(5) == CheckState.Checked);
         }
-
-        private void narutoClick(object sender, EventArgs e)
+        private void heroClick(object sender, EventArgs e)
         {
-            PersonForm pf = new PersonForm("Наруто Узумаки");
+            PictureBox pb = (PictureBox)sender;
+            PersonForm pf = new PersonForm(pb.Tag.ToString());
             pf.Show();
         }
-
-        private void sasukeClick(object sender, EventArgs e)
-        {
-            PersonForm pf = new PersonForm("Саске Учиха");
-            pf.Show();
-        }
-
-        private void kakashiClick(object sender, EventArgs e)
-        {
-            PersonForm pf = new PersonForm("Какаши Хатаке");
-            pf.Show();
-        }
-
-        private void minatoClick(object sender, EventArgs e)
-        {
-            PersonForm pf = new PersonForm("Минато Намиказе");
-            pf.Show();
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void ItachiClick(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            PersonForm pf = new PersonForm("Итачи Учиха");
-            pf.Show();
+
         }
     }
 }
