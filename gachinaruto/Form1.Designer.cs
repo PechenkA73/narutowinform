@@ -44,6 +44,9 @@ namespace gachinaruto
             this.labelprofession = new System.Windows.Forms.Label();
             this.filterprofession = new System.Windows.Forms.CheckedListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,12 +69,20 @@ namespace gachinaruto
             this.panel7 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.professionComboBox = new System.Windows.Forms.ComboBox();
+            this.fromComboBox = new System.Windows.Forms.ComboBox();
+            this.clanComboBox = new System.Windows.Forms.ComboBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel6.SuspendLayout();
@@ -86,8 +97,10 @@ namespace gachinaruto
             ((System.ComponentModel.ISupportInitialize)(this.narutouzumakipic)).BeginInit();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -185,7 +198,7 @@ namespace gachinaruto
             "Яманака",
             "Абураме",
             "Акимичи"});
-            this.filterclan.Location = new System.Drawing.Point(4, 27);
+            this.filterclan.Location = new System.Drawing.Point(0, 39);
             this.filterclan.Margin = new System.Windows.Forms.Padding(4);
             this.filterclan.Name = "filterclan";
             this.filterclan.Size = new System.Drawing.Size(229, 109);
@@ -208,7 +221,7 @@ namespace gachinaruto
             // 
             this.lablefrom.AutoSize = true;
             this.lablefrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lablefrom.Location = new System.Drawing.Point(-4, 136);
+            this.lablefrom.Location = new System.Drawing.Point(-5, 152);
             this.lablefrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lablefrom.Name = "lablefrom";
             this.lablefrom.Size = new System.Drawing.Size(160, 20);
@@ -230,7 +243,7 @@ namespace gachinaruto
             "Деревня Скрытого Облака",
             "Деревня Скрытого Камня",
             "Акацуки"});
-            this.filterfrom.Location = new System.Drawing.Point(0, 160);
+            this.filterfrom.Location = new System.Drawing.Point(0, 206);
             this.filterfrom.Margin = new System.Windows.Forms.Padding(4);
             this.filterfrom.Name = "filterfrom";
             this.filterfrom.Size = new System.Drawing.Size(229, 112);
@@ -240,7 +253,7 @@ namespace gachinaruto
             // 
             this.labelprofession.AutoSize = true;
             this.labelprofession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelprofession.Location = new System.Drawing.Point(-4, 279);
+            this.labelprofession.Location = new System.Drawing.Point(-4, 322);
             this.labelprofession.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelprofession.Name = "labelprofession";
             this.labelprofession.Size = new System.Drawing.Size(111, 20);
@@ -258,12 +271,8 @@ namespace gachinaruto
             "Мизукаге",
             "Райкаге",
             "Цучикаге",
-            "Чунин",
-            "Генин",
-            "Джоунин",
-            "Специальный Джоунин",
             "Анбу"});
-            this.filterprofession.Location = new System.Drawing.Point(0, 303);
+            this.filterprofession.Location = new System.Drawing.Point(0, 376);
             this.filterprofession.Margin = new System.Windows.Forms.Padding(4);
             this.filterprofession.Name = "filterprofession";
             this.filterprofession.Size = new System.Drawing.Size(229, 109);
@@ -273,6 +282,8 @@ namespace gachinaruto
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel11);
+            this.panel1.Controls.Add(this.panel10);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel6);
@@ -286,6 +297,43 @@ namespace gachinaruto
             this.panel1.Size = new System.Drawing.Size(1004, 519);
             this.panel1.TabIndex = 13;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.pictureBox7);
+            this.panel9.Controls.Add(this.label6);
+            this.panel9.Location = new System.Drawing.Point(281, 266);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(196, 234);
+            this.panel9.TabIndex = 6;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Padding = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Size = new System.Drawing.Size(194, 207);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 0;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Tag = "Обито Учиха";
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label6.Location = new System.Drawing.Point(0, 207);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(194, 25);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Обито Учиха";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel8
             // 
@@ -521,7 +569,7 @@ namespace gachinaruto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(42, 420);
+            this.button1.Location = new System.Drawing.Point(41, 493);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(154, 25);
@@ -532,6 +580,9 @@ namespace gachinaruto
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.clanComboBox);
+            this.panel7.Controls.Add(this.fromComboBox);
+            this.panel7.Controls.Add(this.professionComboBox);
             this.panel7.Controls.Add(this.button1);
             this.panel7.Controls.Add(this.labelclan);
             this.panel7.Controls.Add(this.filterprofession);
@@ -564,42 +615,137 @@ namespace gachinaruto
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // panel9
+            // professionComboBox
             // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.pictureBox7);
-            this.panel9.Controls.Add(this.label6);
-            this.panel9.Location = new System.Drawing.Point(281, 266);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(196, 234);
-            this.panel9.TabIndex = 6;
+            this.professionComboBox.FormattingEnabled = true;
+            this.professionComboBox.Items.AddRange(new object[] {
+            "Хокаге",
+            "Казекаге",
+            "Мизукаге",
+            "Райкаге",
+            "Цучикаге",
+            "Анбу"});
+            this.professionComboBox.Location = new System.Drawing.Point(0, 345);
+            this.professionComboBox.Name = "professionComboBox";
+            this.professionComboBox.Size = new System.Drawing.Size(121, 24);
+            this.professionComboBox.TabIndex = 15;
             // 
-            // pictureBox7
+            // fromComboBox
             // 
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.pictureBox7.Size = new System.Drawing.Size(194, 207);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Tag = "Саске Учиха";
+            this.fromComboBox.FormattingEnabled = true;
+            this.fromComboBox.Items.AddRange(new object[] {
+            "Деревня Скрытого Листа",
+            "Деревня Скрытого Звука",
+            "Деревня Скрытого Водопада",
+            "Деревня Скрытого Дождя",
+            "Деревня Скрытого Песка",
+            "Деревня Скрытого Тумана",
+            "Деревня Скрытого Облака",
+            "Деревня Скрытого Камня",
+            "Акацуки"});
+            this.fromComboBox.Location = new System.Drawing.Point(0, 175);
+            this.fromComboBox.Name = "fromComboBox";
+            this.fromComboBox.Size = new System.Drawing.Size(121, 24);
+            this.fromComboBox.TabIndex = 16;
             // 
-            // label6
+            // clanComboBox
             // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label6.Location = new System.Drawing.Point(0, 207);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(194, 25);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Обито Учиха";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.clanComboBox.FormattingEnabled = true;
+            this.clanComboBox.Items.AddRange(new object[] {
+            "Учиха",
+            "Узумаки",
+            "Сенджу",
+            "Хьюга",
+            "Хатаке",
+            "Ибури",
+            "Инузука",
+            "Казекаге",
+            "Ооцуцуки",
+            "Нара",
+            "Сарутоби",
+            "Ли",
+            "Хозуки",
+            "Яманака",
+            "Абураме",
+            "Акимичи"});
+            this.clanComboBox.Location = new System.Drawing.Point(0, 16);
+            this.clanComboBox.Name = "clanComboBox";
+            this.clanComboBox.Size = new System.Drawing.Size(121, 24);
+            this.clanComboBox.TabIndex = 17;
+            // 
+            // panel10
+            // 
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.pictureBox8);
+            this.panel10.Controls.Add(this.label7);
+            this.panel10.Location = new System.Drawing.Point(519, 265);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(196, 234);
+            this.panel10.TabIndex = 7;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Padding = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Size = new System.Drawing.Size(194, 207);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Tag = "Хината Хьюга";
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label7.Location = new System.Drawing.Point(0, 207);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(194, 25);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Хината Хьюга";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel11
+            // 
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.pictureBox9);
+            this.panel11.Controls.Add(this.label8);
+            this.panel11.Location = new System.Drawing.Point(758, 267);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(196, 234);
+            this.panel11.TabIndex = 8;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Padding = new System.Windows.Forms.Padding(4);
+            this.pictureBox9.Size = new System.Drawing.Size(194, 207);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Tag = "Темари";
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label8.Location = new System.Drawing.Point(0, 207);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(194, 25);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Темари";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -622,6 +768,8 @@ namespace gachinaruto
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel6.ResumeLayout(false);
@@ -638,8 +786,10 @@ namespace gachinaruto
             this.panel7.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -685,6 +835,15 @@ namespace gachinaruto
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox fromComboBox;
+        private System.Windows.Forms.ComboBox professionComboBox;
+        private System.Windows.Forms.ComboBox clanComboBox;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label7;
     }
 }
 
