@@ -46,9 +46,6 @@ namespace gachinaruto
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.clanComboBox = new System.Windows.Forms.ComboBox();
-            this.fromComboBox = new System.Windows.Forms.ComboBox();
-            this.professionComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -152,7 +149,7 @@ namespace gachinaruto
             "Яманака",
             "Абураме",
             "Акимичи"});
-            this.filterclan.Location = new System.Drawing.Point(0, 39);
+            this.filterclan.Location = new System.Drawing.Point(-1, 24);
             this.filterclan.Margin = new System.Windows.Forms.Padding(4);
             this.filterclan.Name = "filterclan";
             this.filterclan.Size = new System.Drawing.Size(229, 109);
@@ -175,7 +172,7 @@ namespace gachinaruto
             // 
             this.lablefrom.AutoSize = true;
             this.lablefrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lablefrom.Location = new System.Drawing.Point(-5, 152);
+            this.lablefrom.Location = new System.Drawing.Point(-5, 137);
             this.lablefrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lablefrom.Name = "lablefrom";
             this.lablefrom.Size = new System.Drawing.Size(160, 20);
@@ -197,7 +194,7 @@ namespace gachinaruto
             "Деревня Скрытого Облака",
             "Деревня Скрытого Камня",
             "Акацуки"});
-            this.filterfrom.Location = new System.Drawing.Point(0, 206);
+            this.filterfrom.Location = new System.Drawing.Point(0, 161);
             this.filterfrom.Margin = new System.Windows.Forms.Padding(4);
             this.filterfrom.Name = "filterfrom";
             this.filterfrom.Size = new System.Drawing.Size(229, 112);
@@ -207,7 +204,7 @@ namespace gachinaruto
             // 
             this.labelprofession.AutoSize = true;
             this.labelprofession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelprofession.Location = new System.Drawing.Point(-4, 322);
+            this.labelprofession.Location = new System.Drawing.Point(-5, 277);
             this.labelprofession.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelprofession.Name = "labelprofession";
             this.labelprofession.Size = new System.Drawing.Size(111, 20);
@@ -226,7 +223,7 @@ namespace gachinaruto
             "Райкаге",
             "Цучикаге",
             "Анбу"});
-            this.filterprofession.Location = new System.Drawing.Point(0, 376);
+            this.filterprofession.Location = new System.Drawing.Point(0, 301);
             this.filterprofession.Margin = new System.Windows.Forms.Padding(4);
             this.filterprofession.Name = "filterprofession";
             this.filterprofession.Size = new System.Drawing.Size(229, 109);
@@ -242,6 +239,7 @@ namespace gachinaruto
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1004, 519);
             this.panel1.TabIndex = 13;
+            this.panel1.Click += new System.EventHandler(this.button1_Click);
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button1
@@ -251,7 +249,7 @@ namespace gachinaruto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(41, 493);
+            this.button1.Location = new System.Drawing.Point(46, 418);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(154, 25);
@@ -262,9 +260,6 @@ namespace gachinaruto
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.clanComboBox);
-            this.panel7.Controls.Add(this.fromComboBox);
-            this.panel7.Controls.Add(this.professionComboBox);
             this.panel7.Controls.Add(this.button1);
             this.panel7.Controls.Add(this.labelclan);
             this.panel7.Controls.Add(this.filterprofession);
@@ -276,64 +271,7 @@ namespace gachinaruto
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(233, 519);
             this.panel7.TabIndex = 15;
-            // 
-            // clanComboBox
-            // 
-            this.clanComboBox.FormattingEnabled = true;
-            this.clanComboBox.Items.AddRange(new object[] {
-            "Учиха",
-            "Узумаки",
-            "Сенджу",
-            "Хьюга",
-            "Хатаке",
-            "Ибури",
-            "Инузука",
-            "Казекаге",
-            "Ооцуцуки",
-            "Нара",
-            "Сарутоби",
-            "Ли",
-            "Хозуки",
-            "Яманака",
-            "Абураме",
-            "Акимичи"});
-            this.clanComboBox.Location = new System.Drawing.Point(0, 16);
-            this.clanComboBox.Name = "clanComboBox";
-            this.clanComboBox.Size = new System.Drawing.Size(121, 24);
-            this.clanComboBox.TabIndex = 17;
-            // 
-            // fromComboBox
-            // 
-            this.fromComboBox.FormattingEnabled = true;
-            this.fromComboBox.Items.AddRange(new object[] {
-            "Деревня Скрытого Листа",
-            "Деревня Скрытого Звука",
-            "Деревня Скрытого Водопада",
-            "Деревня Скрытого Дождя",
-            "Деревня Скрытого Песка",
-            "Деревня Скрытого Тумана",
-            "Деревня Скрытого Облака",
-            "Деревня Скрытого Камня",
-            "Акацуки"});
-            this.fromComboBox.Location = new System.Drawing.Point(0, 175);
-            this.fromComboBox.Name = "fromComboBox";
-            this.fromComboBox.Size = new System.Drawing.Size(121, 24);
-            this.fromComboBox.TabIndex = 16;
-            // 
-            // professionComboBox
-            // 
-            this.professionComboBox.FormattingEnabled = true;
-            this.professionComboBox.Items.AddRange(new object[] {
-            "Хокаге",
-            "Казекаге",
-            "Мизукаге",
-            "Райкаге",
-            "Цучикаге",
-            "Анбу"});
-            this.professionComboBox.Location = new System.Drawing.Point(0, 345);
-            this.professionComboBox.Name = "professionComboBox";
-            this.professionComboBox.Size = new System.Drawing.Size(121, 24);
-            this.professionComboBox.TabIndex = 15;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // tableLayoutPanel1
             // 
@@ -403,9 +341,6 @@ namespace gachinaruto
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ComboBox fromComboBox;
-        private System.Windows.Forms.ComboBox professionComboBox;
-        private System.Windows.Forms.ComboBox clanComboBox;
     }
 }
 

@@ -19,6 +19,18 @@ namespace gachinaruto
         public string clan;
         public string from;
         public string profession;
+
+        public Person(string name1, string clan1, string from1, string profession1)
+        {
+            picture = new PictureBox();
+            panel = new Panel();
+            label = new Label();
+            name = name1;
+            clan = clan1;
+            from = from1;
+            profession = profession1;
+        }
+
     }
     public partial class Form1 : Form
     {
@@ -28,64 +40,14 @@ namespace gachinaruto
         {
             InitializeComponent();
 
-            people[0] = new Person
-            {
-                name = "Наруто Узумаки",
-                clan = "Узумаки",
-                from = "Деревня Скрытого Листа",
-                profession = "Хокаге",
-            };
-            people[1] = new Person {
-                name = "Саске Учиха",
-                clan = "Учиха",
-                from = "Деревня Скрытого Листаб, Деревня Скрытого Звука, Акацуки",
-                profession = "Глава Клана Учиха",
-            };
-            people[2] = new Person
-            {
-                name = "Какаши Хатаке",
-                clan = "Хатаке",
-                from = "Деревня Скрытого Листа",
-                profession = "Хокаге",
-            };
-            people[3] = new Person
-            {
-                name = "Минато Намиказе",
-                clan = "Намиказе",
-                from = "Деревня Скрытого Листа",
-                profession = "Хокаге",
-
-            };
-            people[4] = new Person
-            {
-                name = "Итачи Учиха",
-                clan = "Учиха",
-                from = "Деревня Скрытого Листа, Акацуки",
-                profession = "Анбу",
-            };
-            people[5] = new Person
-            {
-                name = "Обито Учиха",
-                clan = "Учиха",
-                from = "Деревня Скрытого Листа, Деревня Скрытого Тумана, Акацуки",
-                profession = "Лидер Акацуки, Тайный лидер Киригакуре",
-            };
-
-            people[6] = new Person
-            {
-                name = "Хината Хьюга",
-                clan = "Хьюга, Узумаки",
-                from = "Деревня Скрытого Листа",
-                profession = "Наслденица Клана Хьюга",
-            };
-
-            people[7] = new Person
-            {
-                name = "Темари",
-                clan = "Клан Казекаге, Нара",
-                from = "Деревня Скрытого Песка, Деревня Скрытого Листа",
-                profession = "Телохранитель Казекаге",
-            };
+            people[0] = new Person("Наруто Узумаки", "Узумаки", "Деревня Скрытого Листа", "Хокаге");
+            people[1] = new Person("Саске Учиха", "Учиха", "Деревня Скрытого Листаб, Деревня Скрытого Звука, Акацуки", "Глава Клана Учиха");
+            people[2] = new Person("Какаши Хатаке", "Хатаке", "Деревня Скрытого Листа", "Хокаге");
+            people[3] = new Person("Минато Намиказе", "Намиказе", "Деревня Скрытого Листа", "Хокаге");
+            people[4] = new Person("Итачи Учиха", "Учиха", "Деревня Скрытого Листа, Акацуки", "Анбу");
+            people[5] = new Person("Обито Учиха", "Учиха", "Деревня Скрытого Листа, Деревня Скрытого Тумана, Акацуки", "Лидер Акацуки, Тайный лидер Киригакуре");
+            people[6] = new Person("Хината Хьюга", "Хьюга, Узумаки", "Деревня Скрытого Листа", "Наследница Клана Хьюга");
+            people[7] = new Person("Темари", "Клан Казекаге, Нара", "Деревня Скрытого Песка, Деревня Скрытого Листа", "Телохранитель Казекаге");
 
             int x = 40;
             int y = 14;
@@ -94,7 +56,7 @@ namespace gachinaruto
                 Panel panel = new Panel();
                 people[i].panel = panel;
                 panel.BorderStyle = BorderStyle.FixedSingle;
-                panel.Location = new Point(x, y);               
+                panel.Location = new Point(x, y);
                 panel.Size = new Size(196, 234);
                 panel.Name = people[i].name;
                 panel1.Controls.Add(panel);
@@ -111,7 +73,7 @@ namespace gachinaruto
                 PictureBox pb1 = new PictureBox();
                 pb1.Location = new Point(3, 0);
                 pb1.Size = new Size(247, 120);
-                pb1.SizeMode = PictureBoxSizeMode.Zoom; 
+                pb1.SizeMode = PictureBoxSizeMode.Zoom;
                 pb1.Tag = people[i].name;
                 try
                 {
@@ -167,24 +129,42 @@ namespace gachinaruto
             for (int i = 0; i < 8; i++)
             {
                 people[i].panel.Visible = true;
-                if (clanComboBox.Text != "" &&
-                    !people[i].clan.Contains(clanComboBox.Text))
+
+                bool clanExist = false;
+                foreach (string clan in filterclan.CheckedItems)
                 {
-                    people[i].panel.Visible = false;
+                    if (people[i].clan.Contains(clan))
+                        clanExist = true;
                 }
-                if (fromComboBox.Text != "" &&
-                    !people[i].from.Contains(fromComboBox.Text))
-                {
-                    people[i].panel.Visible = false;
-                }
-                if (professionComboBox.Text != "" &&
-                    !people[i].profession.Contains(professionComboBox.Text))
+                if (!clanExist && filterclan.CheckedItems.Count > 0)
                 {
                     people[i].panel.Visible = false;
                 }
 
+                bool fromExist = false;
+                foreach (string from in filterfrom.CheckedItems)
+                {
+                    if (people[i].from.Contains(from))
+                        fromExist = true;
+                }
+                if (!fromExist && filterfrom.CheckedItems.Count > 0)
+                {
+                    people[i].panel.Visible = false;
+                }
+               
+                bool professionExist = false;
+                foreach (string profession in filterprofession.CheckedItems)
+                {
+                    if (people[i].profession.Contains(profession))
+                        professionExist = true;
+                }
+                if (!professionExist && filterprofession.CheckedItems.Count > 0)
+                {
+                    people[i].panel.Visible = false;
+                }
+                
 
-                if ( people[i].panel.Visible)
+                if (people[i].panel.Visible)
                 {
                     people[i].panel.Location = new Point(x, y);
 
@@ -233,18 +213,41 @@ namespace gachinaruto
 
         private void privetusername_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void herosearch_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Саске Учиха" || 
-                textBox1.Text == "Итачи Учиха")
+            int x = 40;
+            int y = 14;
+            for (int i = 0; i < 8; i++)
             {
-                people[0].panel.Visible = !people[0].panel.Visible;
-                people[2].panel.Visible = !people[2].panel.Visible;
-                people[3].panel.Visible = !people[3].panel.Visible;
+                people[i].panel.Visible = true;
+                if (textBox1.Text != "" &&
+                    !people[i].name.Contains(textBox1.Text))
+                {
+                    people[i].panel.Visible = false;
+                }
+
+
+                if (people[i].panel.Visible)
+                {
+                    people[i].panel.Location = new Point(x, y);
+
+                    x = x + 240;
+                    if (x + 200 > panel1.Width)
+                    {
+                        x = 40;
+                        y = y + 252;
+                    }
+                }
             }
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
+
