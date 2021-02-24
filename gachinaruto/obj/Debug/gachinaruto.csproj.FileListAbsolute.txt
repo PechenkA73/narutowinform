@@ -20,3 +20,14 @@ F:\gachinaruto\obj\Debug\gachinaruto.pdb
 F:\gachinaruto\bin\Debug\gachinaruto.exe.config
 F:\gachinaruto\bin\Debug\gachinaruto.exe
 F:\gachinaruto\bin\Debug\gachinaruto.pdb
+C:\Users\user\Desktop\da\narutowinform\gachinaruto\bin\Debug\gachinaruto.exe.config
+C:\Users\user\Desktop\da\narutowinform\gachinaruto\bin\Debug\gachinaruto.exe
+C:\Users\user\Desktop\da\narutowinform\gachinaruto\bin\Debug\gachinaruto.pdb
+C:\Users\user\Desktop\da\narutowinform\gachinaruto\obj\Debug\gachinaruto.csprojAssemblyReference.cache
+C:\Users\user\Desktop\da\narutowinform\gachinaruto\obj\Debug\gachinaruto.Form1.resources
+C:\Users\user\Desktop\da\narutowinform\gachinaruto\obj\Debug\gachinaruto.PersonForm.resources
+C:\Users\user\Desktop\da\narutowinform\gachinaruto\obj\Debug\gachinaruto.Properties.Resources.resources
+C:\Users\user\Desktop\da\narutowinform\gachinaruto\obj\Debug\gachinaruto.csproj.GenerateResource.cache
+C:\Users\user\Desktop\da\narutowinform\gachinaruto\obj\Debug\gachinaruto.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\da\narutowinform\gachinaruto\obj\Debug\gachinaruto.exe
+C:\Users\user\Desktop\da\narutowinform\gachinaruto\obj\Debug\gachinaruto.pdb
