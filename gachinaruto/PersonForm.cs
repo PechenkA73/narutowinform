@@ -21,6 +21,16 @@ namespace gachinaruto
             label1.Text = name;
             label2.Text =
                 File.ReadAllText("../../Files/" + name + ".txt");
+            foreach (Person hero in MainForm.people_list)
+            {
+                if (hero.name == name)
+                {
+                    label3.Text = "Клан: " + hero.clan;
+                    label4.Text = "Принадлежность: " + hero.from;
+                    label5.Text = "Профессия: " + hero.profession;
+                }
+
+            }
 
         } 
 

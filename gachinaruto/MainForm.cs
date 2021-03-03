@@ -32,34 +32,33 @@ namespace gachinaruto
         }
 
     }
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Person[] people = new Person[800];
+        public static List<Person> people_list = new List<Person>();
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 
-            people[0] = new Person("Наруто Узумаки", "Узумаки", "Деревня Скрытого Листа", "Хокаге");
-            people[1] = new Person("Саске Учиха", "Учиха", "Деревня Скрытого Листаб, Деревня Скрытого Звука, Акацуки", "Глава Клана Учиха");
-            people[2] = new Person("Какаши Хатаке", "Хатаке", "Деревня Скрытого Листа", "Хокаге");
-            people[3] = new Person("Минато Намиказе", "Намиказе", "Деревня Скрытого Листа", "Хокаге");
-            people[4] = new Person("Итачи Учиха", "Учиха", "Деревня Скрытого Листа, Акацуки", "Анбу");
-            people[5] = new Person("Обито Учиха", "Учиха", "Деревня Скрытого Листа, Деревня Скрытого Тумана, Акацуки", "Лидер Акацуки, Тайный лидер Киригакуре");
-            people[6] = new Person("Хината Хьюга", "Хьюга, Узумаки", "Деревня Скрытого Листа", "Наследница Клана Хьюга");
-            people[7] = new Person("Темари", "Клан Казекаге, Нара", "Деревня Скрытого Песка, Деревня Скрытого Листа", "Телохранитель Казекаге");
+            people_list.Add(new Person("Наруто Узумаки", "Узумаки", "Деревня Скрытого Листа", "Хокаге"));
+            people_list.Add(new Person("Саске Учиха", "Учиха", "Деревня Скрытого Листа, Деревня Скрытого Звука, Акацуки", "Глава Клана Учиха"));
+            people_list.Add(new Person("Какаши Хатаке", "Хатаке", "Деревня Скрытого Листа", "Хокаге"));
+            people_list.Add(new Person("Минато Намиказе", "Намиказе", "Деревня Скрытого Листа", "Хокаге"));
+            people_list.Add(new Person("Итачи Учиха", "Учиха", "Деревня Скрытого Листа, Акацуки", "Анбу"));
+            people_list.Add(new Person("Обито Учиха", "Учиха", "Деревня Скрытого Листа, Деревня Скрытого Тумана, Акацуки", "Лидер Акацуки, Тайный лидер Киригакуре"));
+            people_list.Add(new Person("Хината Хьюга", "Хьюга, Узумаки", "Деревня Скрытого Листа", "Наследница Клана Хьюга"));
+            people_list.Add(new Person("Темари", "Клан Казекаге, Нара", "Деревня Скрытого Песка, Деревня Скрытого Листа", "Телохранитель Казекаге"));
+
 
             int x = 40;
             int y = 14;
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < people_list.Count; i++)
             {
-                Panel panel = new Panel();
-                people[i].panel = panel;
-                panel.BorderStyle = BorderStyle.FixedSingle;
-                panel.Location = new Point(x, y);
-                panel.Size = new Size(196, 234);
-                panel.Name = people[i].name;
-                panel1.Controls.Add(panel);
+                people_list[i].panel.BorderStyle = BorderStyle.FixedSingle;
+                people_list[i].panel.Location = new Point(x, y);
+                people_list[i].panel.Size = new Size(196, 234);
+                people_list[i].panel.Name = people_list[i].name;
+                panel1.Controls.Add(people_list[i].panel);
 
 
                 x = x + 240;
@@ -70,30 +69,23 @@ namespace gachinaruto
                 }
 
 
-                PictureBox pb1 = new PictureBox();
-                pb1.Location = new Point(3, 0);
-                pb1.Size = new Size(247, 120);
-                pb1.SizeMode = PictureBoxSizeMode.Zoom;
-                pb1.Tag = people[i].name;
+                people_list[i].picture.Location = new Point(3, 0);
+                people_list[i].picture.SizeMode = PictureBoxSizeMode.Zoom;
+                people_list[i].picture.Tag = people_list[i].name;
                 try
                 {
-                    pb1.Load("../../Pictures/" + people[i].name + ".jpg");
+                    people_list[i].picture.Load("../../Pictures/" + people_list[i].name + ".jpg");
                 }
                 catch (Exception) { }
-                pb1.Dock = DockStyle.Fill;
-                pb1.Click += new EventHandler(heroClick);
-                people[i].panel.Controls.Add(pb1);
-                people[i].picture = pb1;
+                people_list[i].picture.Dock = DockStyle.Fill;
+                people_list[i].picture.Click += new EventHandler(heroClick);
+                people_list[i].panel.Controls.Add(people_list[i].picture);
 
-                Label lb1 = new Label();
-                lb1.Dock = DockStyle.Bottom;
-                lb1.Location = new Point(0, 207);
-                lb1.Margin = new Padding(4, 0, 4, 0);
-                lb1.TextAlign = ContentAlignment.MiddleCenter;
-                lb1.Name = people[i].name;
-                lb1.Text = people[i].name;
-                people[i].panel.Controls.Add(lb1);
-                people[i].label = lb1;
+                people_list[i].label.Dock = DockStyle.Bottom;
+                people_list[i].label.Margin = new Padding(4, 0, 4, 0);
+                people_list[i].label.TextAlign = ContentAlignment.MiddleCenter;
+                people_list[i].label.Text = people_list[i].name;
+                people_list[i].panel.Controls.Add(people_list[i].label);
             }
 
         }
@@ -126,47 +118,46 @@ namespace gachinaruto
         {
             int x = 40;
             int y = 14;
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < people_list.Count; i++)
             {
-                people[i].panel.Visible = true;
+                people_list[i].panel.Visible = true;
 
                 bool clanExist = false;
                 foreach (string clan in filterclan.CheckedItems)
                 {
-                    if (people[i].clan.Contains(clan))
+                    if (people_list[i].clan.Contains(clan))
                         clanExist = true;
                 }
                 if (!clanExist && filterclan.CheckedItems.Count > 0)
                 {
-                    people[i].panel.Visible = false;
+                    people_list[i].panel.Visible = false;
                 }
 
                 bool fromExist = false;
                 foreach (string from in filterfrom.CheckedItems)
                 {
-                    if (people[i].from.Contains(from))
+                    if (people_list[i].from.Contains(from))
                         fromExist = true;
                 }
                 if (!fromExist && filterfrom.CheckedItems.Count > 0)
                 {
-                    people[i].panel.Visible = false;
+                    people_list[i].panel.Visible = false;
                 }
-               
+
                 bool professionExist = false;
                 foreach (string profession in filterprofession.CheckedItems)
                 {
-                    if (people[i].profession.Contains(profession))
+                    if (people_list[i].profession.Contains(profession))
                         professionExist = true;
                 }
                 if (!professionExist && filterprofession.CheckedItems.Count > 0)
                 {
-                    people[i].panel.Visible = false;
+                    people_list[i].panel.Visible = false;
                 }
-                
 
-                if (people[i].panel.Visible)
+                if (people_list[i].panel.Visible)
                 {
-                    people[i].panel.Location = new Point(x, y);
+                    people_list[i].panel.Location = new Point(x, y);
 
                     x = x + 240;
                     if (x + 200 > panel1.Width)
@@ -220,19 +211,19 @@ namespace gachinaruto
         {
             int x = 40;
             int y = 14;
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < people_list.Count; i++)
             {
-                people[i].panel.Visible = true;
+                people_list[i].panel.Visible = true;
                 if (textBox1.Text != "" &&
-                    !people[i].name.Contains(textBox1.Text))
+                    !people_list[i].name.Contains(textBox1.Text))
                 {
-                    people[i].panel.Visible = false;
+                    people_list[i].panel.Visible = false;
                 }
 
 
-                if (people[i].panel.Visible)
+                if (people_list[i].panel.Visible)
                 {
-                    people[i].panel.Location = new Point(x, y);
+                    people_list[i].panel.Location = new Point(x, y);
 
                     x = x + 240;
                     if (x + 200 > panel1.Width)
@@ -247,6 +238,12 @@ namespace gachinaruto
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FavouritePersonPage fpp = new FavouritePersonPage();
+            fpp.Show();
         }
     }
 }

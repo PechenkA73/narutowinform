@@ -1,7 +1,7 @@
 ﻿
 namespace gachinaruto
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -30,7 +30,7 @@ namespace gachinaruto
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.herosearch = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -48,10 +48,12 @@ namespace gachinaruto
             this.panel7 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.favouritepersonpagebutton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.favouritepersonpagebutton)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -106,19 +108,19 @@ namespace gachinaruto
             // 
             this.privetusername.AutoSize = true;
             this.privetusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.privetusername.Location = new System.Drawing.Point(943, 88);
+            this.privetusername.Location = new System.Drawing.Point(1073, 110);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(184, 25);
+            this.privetusername.Size = new System.Drawing.Size(104, 25);
             this.privetusername.TabIndex = 5;
-            this.privetusername.Text = "Привет, username!";
+            this.privetusername.Text = " username";
             this.privetusername.Click += new System.EventHandler(this.privetusername_Click);
             // 
             // userpicture
             // 
             this.userpicture.Image = ((System.Drawing.Image)(resources.GetObject("userpicture.Image")));
             this.userpicture.InitialImage = null;
-            this.userpicture.Location = new System.Drawing.Point(1135, 36);
+            this.userpicture.Location = new System.Drawing.Point(1078, 33);
             this.userpicture.Margin = new System.Windows.Forms.Padding(4);
             this.userpicture.Name = "userpicture";
             this.userpicture.Size = new System.Drawing.Size(78, 73);
@@ -149,7 +151,7 @@ namespace gachinaruto
             "Яманака",
             "Абураме",
             "Акимичи"});
-            this.filterclan.Location = new System.Drawing.Point(-1, 16);
+            this.filterclan.Location = new System.Drawing.Point(0, 24);
             this.filterclan.Margin = new System.Windows.Forms.Padding(4);
             this.filterclan.Name = "filterclan";
             this.filterclan.Size = new System.Drawing.Size(229, 130);
@@ -160,7 +162,7 @@ namespace gachinaruto
             // 
             this.labelclan.AutoSize = true;
             this.labelclan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelclan.Location = new System.Drawing.Point(-4, -8);
+            this.labelclan.Location = new System.Drawing.Point(4, 0);
             this.labelclan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelclan.Name = "labelclan";
             this.labelclan.Size = new System.Drawing.Size(55, 20);
@@ -172,7 +174,7 @@ namespace gachinaruto
             // 
             this.lablefrom.AutoSize = true;
             this.lablefrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lablefrom.Location = new System.Drawing.Point(-5, 150);
+            this.lablefrom.Location = new System.Drawing.Point(4, 158);
             this.lablefrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lablefrom.Name = "lablefrom";
             this.lablefrom.Size = new System.Drawing.Size(160, 20);
@@ -194,7 +196,7 @@ namespace gachinaruto
             "Деревня Скрытого Облака",
             "Деревня Скрытого Камня",
             "Акацуки"});
-            this.filterfrom.Location = new System.Drawing.Point(-1, 174);
+            this.filterfrom.Location = new System.Drawing.Point(0, 185);
             this.filterfrom.Margin = new System.Windows.Forms.Padding(4);
             this.filterfrom.Name = "filterfrom";
             this.filterfrom.Size = new System.Drawing.Size(229, 130);
@@ -204,7 +206,7 @@ namespace gachinaruto
             // 
             this.labelprofession.AutoSize = true;
             this.labelprofession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelprofession.Location = new System.Drawing.Point(-4, 308);
+            this.labelprofession.Location = new System.Drawing.Point(4, 319);
             this.labelprofession.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelprofession.Name = "labelprofession";
             this.labelprofession.Size = new System.Drawing.Size(111, 20);
@@ -217,13 +219,14 @@ namespace gachinaruto
             this.filterprofession.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.filterprofession.FormattingEnabled = true;
             this.filterprofession.Items.AddRange(new object[] {
+            "Ниндзя-медик",
+            "Анбу",
             "Хокаге",
             "Казекаге",
             "Мизукаге",
             "Райкаге",
-            "Цучикаге",
-            "Анбу"});
-            this.filterprofession.Location = new System.Drawing.Point(0, 332);
+            "Цучикаге"});
+            this.filterprofession.Location = new System.Drawing.Point(4, 343);
             this.filterprofession.Margin = new System.Windows.Forms.Padding(4);
             this.filterprofession.Name = "filterprofession";
             this.filterprofession.Size = new System.Drawing.Size(229, 130);
@@ -249,7 +252,7 @@ namespace gachinaruto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(27, 470);
+            this.button1.Location = new System.Drawing.Point(28, 481);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(181, 32);
@@ -293,11 +296,23 @@ namespace gachinaruto
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // Form1
+            // favouritepersonpagebutton
+            // 
+            this.favouritepersonpagebutton.Image = ((System.Drawing.Image)(resources.GetObject("favouritepersonpagebutton.Image")));
+            this.favouritepersonpagebutton.Location = new System.Drawing.Point(1174, 34);
+            this.favouritepersonpagebutton.Name = "favouritepersonpagebutton";
+            this.favouritepersonpagebutton.Size = new System.Drawing.Size(76, 72);
+            this.favouritepersonpagebutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.favouritepersonpagebutton.TabIndex = 17;
+            this.favouritepersonpagebutton.TabStop = false;
+            this.favouritepersonpagebutton.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.favouritepersonpagebutton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
@@ -306,10 +321,10 @@ namespace gachinaruto
             this.Controls.Add(this.naitipersonaja);
             this.Controls.Add(this.pictureBox2);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(1703, 805);
+            this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
-            this.Name = "Form1";
-            this.Text = "mainpage";
+            this.Name = "MainForm";
+            this.Text = "Main page";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();
@@ -317,6 +332,7 @@ namespace gachinaruto
             this.panel7.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.favouritepersonpagebutton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,6 +357,7 @@ namespace gachinaruto
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.PictureBox favouritepersonpagebutton;
     }
 }
 
