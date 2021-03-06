@@ -195,7 +195,9 @@ namespace gachinaruto
             "Деревня Скрытого Тумана",
             "Деревня Скрытого Облака",
             "Деревня Скрытого Камня",
-            "Акацуки"});
+            "Акацуки",
+            "Союзные Силы Шиноби",
+            "Лес Шиккоцу"});
             this.filterfrom.Location = new System.Drawing.Point(0, 185);
             this.filterfrom.Margin = new System.Windows.Forms.Padding(4);
             this.filterfrom.Name = "filterfrom";

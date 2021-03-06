@@ -15,6 +15,9 @@ namespace gachinaruto
         public PictureBox picture;
         public Panel panel;
         public Label label;
+        /// <summary>
+        /// Имя персонажа
+        /// </summary>
         public string name;
         public string clan;
         public string from;
@@ -34,7 +37,15 @@ namespace gachinaruto
     }
     public partial class MainForm : Form
     {
+        /// <summary>
+        /// Все персонажи
+        /// </summary>
         public static List<Person> people_list = new List<Person>();
+
+        /// <summary>
+        /// Любимые
+        /// </summary>
+        public static List<Person> favCharacters = new List<Person>();
 
         public MainForm()
         {
@@ -48,6 +59,9 @@ namespace gachinaruto
             people_list.Add(new Person("Обито Учиха", "Учиха", "Деревня Скрытого Листа, Деревня Скрытого Тумана, Акацуки", "Лидер Акацуки, Тайный лидер Киригакуре"));
             people_list.Add(new Person("Хината Хьюга", "Хьюга, Узумаки", "Деревня Скрытого Листа", "Наследница Клана Хьюга"));
             people_list.Add(new Person("Темари", "Клан Казекаге, Нара", "Деревня Скрытого Песка, Деревня Скрытого Листа", "Телохранитель Казекаге"));
+            people_list.Add(new Person("Цунаде Сенджу", "Сенджу, Узумаки", "Деревня Скрытого Листа, Лес Шиккоцу, Союзные Силы Шиноби", "Хокаге, Ниндзя-медик"));
+            people_list.Add(new Person("Сакура Харуно", "Харуно, Учиха", "Деревня Скрытого Листа, Лес Шиккоцу, Союзные Силы Шиноби", "Ниндзя-медик, Доктор, Директор Детско Психиатрической Клиники Листа"));
+
 
 
             int x = 40;
@@ -76,7 +90,14 @@ namespace gachinaruto
                 {
                     people_list[i].picture.Load("../../Pictures/" + people_list[i].name + ".jpg");
                 }
-                catch (Exception) { }
+                catch (Exception) 
+                {
+                    try
+                    {
+                        people_list[i].picture.Load("../../Pictures/" + people_list[i].name + ".png");
+                    }
+                    catch (Exception) { }
+                }
                 people_list[i].picture.Dock = DockStyle.Fill;
                 people_list[i].picture.Click += new EventHandler(heroClick);
                 people_list[i].panel.Controls.Add(people_list[i].picture);
@@ -186,10 +207,10 @@ namespace gachinaruto
                 filterfrom.GetItemCheckState(8) == CheckState.Checked ||
                 filterfrom.GetItemCheckState(5) == CheckState.Checked);*/
         }
-        private void heroClick(object sender, EventArgs e)
+        public static void heroClick(object sender, EventArgs e)
         {
             PictureBox pb = (PictureBox)sender;
-            PersonForm pf = new PersonForm(pb.Tag.ToString());
+            CharacterForm pf = new CharacterForm(pb.Tag.ToString());
             pf.Show();
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -242,7 +263,7 @@ namespace gachinaruto
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            FavouritePersonPage fpp = new FavouritePersonPage();
+            FavouriteCharactersPage fpp = new FavouriteCharactersPage();
             fpp.Show();
         }
     }

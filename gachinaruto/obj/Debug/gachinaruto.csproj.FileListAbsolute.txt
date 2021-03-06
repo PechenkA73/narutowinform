@@ -43,3 +43,15 @@ C:\Users\user\Desktop\da\narutowinform\gachinaruto\obj\Debug\gachinaruto.exe
 C:\Users\user\Desktop\da\narutowinform\gachinaruto\obj\Debug\gachinaruto.pdb
 C:\Users\user\Desktop\da\narutowinform\gachinaruto\obj\Debug\gachinaruto.csprojAssemblyReference.cache
 C:\Users\user\Desktop\da\narutowinform\gachinaruto\obj\Debug\gachinaruto.FavouritePersonPage.resources
+C:\Users\user\Desktop\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\bin\Debug\gachinaruto.exe.config
+C:\Users\user\Desktop\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\bin\Debug\gachinaruto.exe
+C:\Users\user\Desktop\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\bin\Debug\gachinaruto.pdb
+C:\Users\user\Desktop\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.csprojAssemblyReference.cache
+C:\Users\user\Desktop\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.FavouriteCharactersPage.resources
+C:\Users\user\Desktop\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.MainForm.resources
+C:\Users\user\Desktop\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.CharacterForm.resources
+C:\Users\user\Desktop\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.Properties.Resources.resources
+C:\Users\user\Desktop\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.csproj.GenerateResource.cache
+C:\Users\user\Desktop\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.exe
+C:\Users\user\Desktop\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.pdb

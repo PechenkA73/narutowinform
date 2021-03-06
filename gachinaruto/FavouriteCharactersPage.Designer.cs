@@ -1,7 +1,7 @@
 ﻿
 namespace gachinaruto
 {
-    partial class FavouritePersonPage
+    partial class FavouriteCharactersPage
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace gachinaruto
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FavouritePersonPage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FavouriteCharactersPage));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.privetusername = new System.Windows.Forms.Label();
             this.userpicture = new System.Windows.Forms.PictureBox();
@@ -95,7 +95,7 @@ namespace gachinaruto
             this.panel1.Size = new System.Drawing.Size(1236, 519);
             this.panel1.TabIndex = 14;
             // 
-            // FavouritePersonPage
+            // FavouriteCharactersPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,8 +108,8 @@ namespace gachinaruto
             this.Controls.Add(this.pictureBox2);
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
-            this.Name = "FavouritePersonPage";
-            this.Text = "Favourite person page";
+            this.Name = "FavouriteCharactersPage";
+            this.Text = "Favourite characters page";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();
             this.ResumeLayout(false);
