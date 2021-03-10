@@ -45,6 +45,11 @@ namespace gachinaruto
                     label3.Text = "Клан: " + hero.clan;
                     label4.Text = "Принадлежность: " + hero.from;
                     label5.Text = "Профессия: " + hero.profession;
+
+                    if (MainForm.favCharacters.Contains(hero))
+                    {
+                        button1.Text = "Убрать из любимых персонажей";
+                    }
                 }
 
             }

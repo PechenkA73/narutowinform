@@ -49,11 +49,13 @@ namespace gachinaruto
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.favouritepersonpagebutton = new System.Windows.Forms.PictureBox();
+            this.clanpagebutton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.favouritepersonpagebutton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clanpagebutton)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -108,7 +110,7 @@ namespace gachinaruto
             // 
             this.privetusername.AutoSize = true;
             this.privetusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.privetusername.Location = new System.Drawing.Point(1073, 110);
+            this.privetusername.Location = new System.Drawing.Point(1087, 112);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
             this.privetusername.Size = new System.Drawing.Size(104, 25);
@@ -120,10 +122,10 @@ namespace gachinaruto
             // 
             this.userpicture.Image = ((System.Drawing.Image)(resources.GetObject("userpicture.Image")));
             this.userpicture.InitialImage = null;
-            this.userpicture.Location = new System.Drawing.Point(1078, 33);
+            this.userpicture.Location = new System.Drawing.Point(1092, 34);
             this.userpicture.Margin = new System.Windows.Forms.Padding(4);
             this.userpicture.Name = "userpicture";
-            this.userpicture.Size = new System.Drawing.Size(78, 73);
+            this.userpicture.Size = new System.Drawing.Size(75, 75);
             this.userpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.userpicture.TabIndex = 6;
             this.userpicture.TabStop = false;
@@ -301,19 +303,31 @@ namespace gachinaruto
             // favouritepersonpagebutton
             // 
             this.favouritepersonpagebutton.Image = ((System.Drawing.Image)(resources.GetObject("favouritepersonpagebutton.Image")));
-            this.favouritepersonpagebutton.Location = new System.Drawing.Point(1174, 34);
+            this.favouritepersonpagebutton.Location = new System.Drawing.Point(1184, 34);
             this.favouritepersonpagebutton.Name = "favouritepersonpagebutton";
-            this.favouritepersonpagebutton.Size = new System.Drawing.Size(76, 72);
+            this.favouritepersonpagebutton.Size = new System.Drawing.Size(75, 75);
             this.favouritepersonpagebutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.favouritepersonpagebutton.TabIndex = 17;
             this.favouritepersonpagebutton.TabStop = false;
             this.favouritepersonpagebutton.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // clanpagebutton
+            // 
+            this.clanpagebutton.Image = ((System.Drawing.Image)(resources.GetObject("clanpagebutton.Image")));
+            this.clanpagebutton.Location = new System.Drawing.Point(1001, 34);
+            this.clanpagebutton.Name = "clanpagebutton";
+            this.clanpagebutton.Size = new System.Drawing.Size(75, 75);
+            this.clanpagebutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.clanpagebutton.TabIndex = 18;
+            this.clanpagebutton.TabStop = false;
+            this.clanpagebutton.Click += new System.EventHandler(this.clanpagebutton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.clanpagebutton);
             this.Controls.Add(this.favouritepersonpagebutton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel7);
@@ -335,6 +349,7 @@ namespace gachinaruto
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.favouritepersonpagebutton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clanpagebutton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,6 +375,7 @@ namespace gachinaruto
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.PictureBox favouritepersonpagebutton;
+        private System.Windows.Forms.PictureBox clanpagebutton;
     }
 }
 

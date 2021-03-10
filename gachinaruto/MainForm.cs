@@ -33,7 +33,25 @@ namespace gachinaruto
             from = from1;
             profession = profession1;
         }
+    }
 
+    public struct Clan
+    {
+        public PictureBox picture;
+        public Panel panel;
+        public Label label;
+        /// <summary>
+        /// Название клана
+        /// </summary>
+        public string name;
+
+        public Clan(string name1)
+        {
+            picture = new PictureBox();
+            panel = new Panel();
+            label = new Label();
+            name = name1;
+        }
     }
     public partial class MainForm : Form
     {
@@ -47,9 +65,16 @@ namespace gachinaruto
         /// </summary>
         public static List<Person> favCharacters = new List<Person>();
 
+        /// <summary>
+        /// Все кланы
+        /// </summary>
+        public static List<Clan> clans_list = new List<Clan>();
+
         public MainForm()
         {
             InitializeComponent();
+
+            clans_list.Add(new Clan("Учиха"));
 
             people_list.Add(new Person("Наруто Узумаки", "Узумаки", "Деревня Скрытого Листа", "Хокаге"));
             people_list.Add(new Person("Саске Учиха", "Учиха", "Деревня Скрытого Листа, Деревня Скрытого Звука, Акацуки", "Глава Клана Учиха"));
@@ -265,6 +290,12 @@ namespace gachinaruto
         {
             FavouriteCharactersPage fpp = new FavouriteCharactersPage();
             fpp.Show();
+        }
+
+        private void clanpagebutton_Click(object sender, EventArgs e)
+        {
+            ClanForm cpf = new ClanForm();
+            cpf.Show();
         }
     }
 }

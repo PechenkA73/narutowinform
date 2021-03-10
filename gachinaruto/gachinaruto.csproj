@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClanForm.Designer.cs">
+      <DependentUpon>ClanForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FavouriteCharactersPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClanForm.resx">
+      <DependentUpon>ClanForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FavouriteCharactersPage.resx">
       <DependentUpon>FavouriteCharactersPage.cs</DependentUpon>
     </EmbeddedResource>
