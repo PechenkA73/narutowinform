@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,54 +12,77 @@ namespace gachinaruto
 {
     public partial class ClanForm : Form
     {
-        public ClanForm()
+        /// <summary>
+        /// Что за клан тут открыт
+        /// </summary>
+        string clanName;
+        public ClanForm(string _name)
         {
+            clanName = _name;
             InitializeComponent();
-
-            int x = 40;
-            int y = 14;
-            foreach (Clan clan in MainForm.clans_list)
+            Text = "Клан " + clanName;
+            try
             {
-                clan.panel.BorderStyle = BorderStyle.FixedSingle;
-                clan.panel.Location = new Point(x, y);
-                clan.panel.Size = new Size(196, 234);
-                clan.panel.Name = clan.name;
-                panel1.Controls.Add(clan.panel);
-
-
-                x = x + 240;
-                if (x + 200 > panel1.Width)
-                {
-                    x = 40;
-                    y = y + 252;
-                }
-
-
-                clan.picture.Location = new Point(3, 0);
-                clan.picture.SizeMode = PictureBoxSizeMode.Zoom;
-                clan.picture.Tag = clan.name;
+                pictureBox1.Load("../../Pictures/Кланы/" + clanName + ".jpg");
+            }
+            catch (Exception)
+            {
                 try
                 {
-                    clan.picture.Load("../../Pictures/Кланы/" + clan.name + ".jpg");
+                    pictureBox1.Load("../../Pictures/Кланы/" + clanName + ".png");
                 }
-                catch (Exception)
+                catch (Exception) { }
+            }
+
+            label1.Text = "Клан " + clanName;
+            label2.Text =
+                File.ReadAllText("../../Files/Кланы/" + clanName + ".txt");
+
+            int x = 10;
+            foreach(Person pers in MainForm.people_list)
+            {
+                if (pers.clan.Contains(clanName))
                 {
+                    Panel panel = new Panel();
+                    panel.BorderStyle = BorderStyle.FixedSingle;
+                    panel.Location = new Point(x, 0);
+                    panel.Size = new Size(190, 230);
+                    panel.Name = pers.name;
+                    panel1.Controls.Add(panel);
+
+
+                    x = x + 200;
+
+                    PictureBox picture = new PictureBox();
+                    picture.Location = new Point(3, 0);
+                    picture.SizeMode = PictureBoxSizeMode.Zoom;
+                    picture.Tag = pers.name;
                     try
                     {
-                        clan.picture.Load("../../Pictures/Кланы/" + clan.name + ".png");
+                        picture.Load("../../Pictures/Персонажи/" + pers.name + ".jpg");
                     }
-                    catch (Exception) { }
-                }
-                clan.picture.Dock = DockStyle.Fill;
-                //clan_list[i].picture.Click += new EventHandler(heroClick);
-                clan.panel.Controls.Add(clan.picture);
+                    catch (Exception)
+                    {
+                        try
+                        {
+                            picture.Load("../../Pictures/Персонажи/" + pers.name + ".png");
+                        }
+                        catch (Exception) { }
+                    }
+                    picture.Dock = DockStyle.Fill;
+                    picture.Click += new EventHandler(MainForm.heroClick);
+                    panel.Controls.Add(picture);
 
-                clan.label.Dock = DockStyle.Bottom;
-                clan.label.Margin = new Padding(4, 0, 4, 0);
-                clan.label.TextAlign = ContentAlignment.MiddleCenter;
-                clan.label.Text = clan.name;
-                clan.panel.Controls.Add(clan.label);
+                    Label label = new Label();
+                    label.Dock = DockStyle.Bottom;
+                    label.Margin = new Padding(4, 0, 4, 0);
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    label.Text = pers.name;
+                    panel.Controls.Add(label);
+                }
             }
         }
+
+       
     }
 }

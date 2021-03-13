@@ -50,6 +50,7 @@ namespace gachinaruto
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.favouritepersonpagebutton = new System.Windows.Forms.PictureBox();
             this.clanpagebutton = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.panel7.SuspendLayout();
@@ -309,6 +310,7 @@ namespace gachinaruto
             this.favouritepersonpagebutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.favouritepersonpagebutton.TabIndex = 17;
             this.favouritepersonpagebutton.TabStop = false;
+            this.toolTip1.SetToolTip(this.favouritepersonpagebutton, "Любимые персонажи");
             this.favouritepersonpagebutton.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // clanpagebutton
@@ -320,6 +322,7 @@ namespace gachinaruto
             this.clanpagebutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.clanpagebutton.TabIndex = 18;
             this.clanpagebutton.TabStop = false;
+            this.toolTip1.SetToolTip(this.clanpagebutton, "Кланы");
             this.clanpagebutton.Click += new System.EventHandler(this.clanpagebutton_Click);
             // 
             // MainForm
@@ -376,6 +379,7 @@ namespace gachinaruto
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.PictureBox favouritepersonpagebutton;
         private System.Windows.Forms.PictureBox clanpagebutton;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

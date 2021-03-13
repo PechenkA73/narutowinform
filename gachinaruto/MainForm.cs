@@ -113,13 +113,13 @@ namespace gachinaruto
                 people_list[i].picture.Tag = people_list[i].name;
                 try
                 {
-                    people_list[i].picture.Load("../../Pictures/" + people_list[i].name + ".jpg");
+                    people_list[i].picture.Load("../../Pictures/Персонажи/" + people_list[i].name + ".jpg");
                 }
                 catch (Exception) 
                 {
                     try
                     {
-                        people_list[i].picture.Load("../../Pictures/" + people_list[i].name + ".png");
+                        people_list[i].picture.Load("../../Pictures/Персонажи/" + people_list[i].name + ".png");
                     }
                     catch (Exception) { }
                 }
@@ -294,7 +294,7 @@ namespace gachinaruto
 
         private void clanpagebutton_Click(object sender, EventArgs e)
         {
-            ClanForm cpf = new ClanForm();
+            ClansPage cpf = new ClansPage();
             cpf.Show();
         }
     }

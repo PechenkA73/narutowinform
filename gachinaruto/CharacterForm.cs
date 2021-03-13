@@ -24,20 +24,20 @@ namespace gachinaruto
             Text = name;
             try
             {
-                pictureBox1.Load("../../Pictures/" + name + ".jpg");
+                pictureBox1.Load("../../Pictures/Персонажи/" + name + ".jpg");
             }
             catch (Exception)
             {
                 try
                 {
-                    pictureBox1.Load("../../Pictures/" + name + ".png");
+                    pictureBox1.Load("../../Pictures/Персонажи/" + name + ".png");
                 }
                 catch (Exception) { }
             }
 
             label1.Text = name;
             label2.Text =
-                File.ReadAllText("../../Files/" + name + ".txt");
+                File.ReadAllText("../../Files/Персонажи/" + name + ".txt");
             foreach (Person hero in MainForm.people_list)
             {
                 if (hero.name == name)

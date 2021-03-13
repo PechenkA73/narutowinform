@@ -52,6 +52,12 @@
     <Compile Include="ClanForm.Designer.cs">
       <DependentUpon>ClanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClansPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClansPage.Designer.cs">
+      <DependentUpon>ClansPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FavouriteCharactersPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ClanForm.resx">
       <DependentUpon>ClanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClansPage.resx">
+      <DependentUpon>ClansPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FavouriteCharactersPage.resx">
       <DependentUpon>FavouriteCharactersPage.cs</DependentUpon>
