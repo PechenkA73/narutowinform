@@ -46,7 +46,7 @@ namespace gachinaruto
                     Panel panel = new Panel();
                     panel.BorderStyle = BorderStyle.FixedSingle;
                     panel.Location = new Point(x, 0);
-                    panel.Size = new Size(190, 230);
+                    panel.Size = new Size(185, 220);
                     panel.Name = pers.name;
                     panel1.Controls.Add(panel);
 
@@ -83,6 +83,9 @@ namespace gachinaruto
             }
         }
 
-       
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

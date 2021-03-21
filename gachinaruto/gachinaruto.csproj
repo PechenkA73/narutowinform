@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArticleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArticleForm.Designer.cs">
+      <DependentUpon>ArticleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArticlesPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArticlesPage.Designer.cs">
+      <DependentUpon>ArticlesPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClanForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ArticleForm.resx">
+      <DependentUpon>ArticleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArticlesPage.resx">
+      <DependentUpon>ArticlesPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClanForm.resx">
       <DependentUpon>ClanForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -51,12 +51,14 @@ namespace gachinaruto
             this.favouritepersonpagebutton = new System.Windows.Forms.PictureBox();
             this.clanpagebutton = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.articleicon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.favouritepersonpagebutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clanpagebutton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articleicon)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -103,7 +105,7 @@ namespace gachinaruto
             this.naitipersonaja.Location = new System.Drawing.Point(293, 40);
             this.naitipersonaja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.naitipersonaja.Name = "naitipersonaja";
-            this.naitipersonaja.Size = new System.Drawing.Size(182, 25);
+            this.naitipersonaja.Size = new System.Drawing.Size(147, 20);
             this.naitipersonaja.TabIndex = 4;
             this.naitipersonaja.Text = "Найти персонажа:";
             // 
@@ -111,10 +113,10 @@ namespace gachinaruto
             // 
             this.privetusername.AutoSize = true;
             this.privetusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.privetusername.Location = new System.Drawing.Point(1087, 112);
+            this.privetusername.Location = new System.Drawing.Point(1102, 112);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(104, 25);
+            this.privetusername.Size = new System.Drawing.Size(84, 20);
             this.privetusername.TabIndex = 5;
             this.privetusername.Text = " username";
             this.privetusername.Click += new System.EventHandler(this.privetusername_Click);
@@ -123,7 +125,7 @@ namespace gachinaruto
             // 
             this.userpicture.Image = ((System.Drawing.Image)(resources.GetObject("userpicture.Image")));
             this.userpicture.InitialImage = null;
-            this.userpicture.Location = new System.Drawing.Point(1092, 34);
+            this.userpicture.Location = new System.Drawing.Point(1106, 34);
             this.userpicture.Margin = new System.Windows.Forms.Padding(4);
             this.userpicture.Name = "userpicture";
             this.userpicture.Size = new System.Drawing.Size(75, 75);
@@ -149,7 +151,6 @@ namespace gachinaruto
             "Ооцуцуки",
             "Нара",
             "Сарутоби",
-            "Ли",
             "Хозуки",
             "Яманака",
             "Абураме",
@@ -157,7 +158,7 @@ namespace gachinaruto
             this.filterclan.Location = new System.Drawing.Point(0, 24);
             this.filterclan.Margin = new System.Windows.Forms.Padding(4);
             this.filterclan.Name = "filterclan";
-            this.filterclan.Size = new System.Drawing.Size(229, 130);
+            this.filterclan.Size = new System.Drawing.Size(229, 123);
             this.filterclan.TabIndex = 7;
             this.filterclan.SelectedIndexChanged += new System.EventHandler(this.filterclan_SelectedIndexChanged);
             // 
@@ -168,7 +169,7 @@ namespace gachinaruto
             this.labelclan.Location = new System.Drawing.Point(4, 0);
             this.labelclan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelclan.Name = "labelclan";
-            this.labelclan.Size = new System.Drawing.Size(55, 20);
+            this.labelclan.Size = new System.Drawing.Size(45, 17);
             this.labelclan.TabIndex = 8;
             this.labelclan.Text = "Клан:";
             this.labelclan.Click += new System.EventHandler(this.labelclan_Click);
@@ -180,7 +181,7 @@ namespace gachinaruto
             this.lablefrom.Location = new System.Drawing.Point(4, 158);
             this.lablefrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lablefrom.Name = "lablefrom";
-            this.lablefrom.Size = new System.Drawing.Size(160, 20);
+            this.lablefrom.Size = new System.Drawing.Size(124, 17);
             this.lablefrom.TabIndex = 9;
             this.lablefrom.Text = "Принадлежность:";
             // 
@@ -198,13 +199,17 @@ namespace gachinaruto
             "Деревня Скрытого Тумана",
             "Деревня Скрытого Облака",
             "Деревня Скрытого Камня",
+            "Деревня Скрытых Водоворотов",
+            "Деревня Скрытой Травы",
             "Акацуки",
             "Союзные Силы Шиноби",
-            "Лес Шиккоцу"});
+            "Лес Шиккоцу",
+            "Гора Мьёбоку",
+            "Пещера Рьючи"});
             this.filterfrom.Location = new System.Drawing.Point(0, 185);
             this.filterfrom.Margin = new System.Windows.Forms.Padding(4);
             this.filterfrom.Name = "filterfrom";
-            this.filterfrom.Size = new System.Drawing.Size(229, 130);
+            this.filterfrom.Size = new System.Drawing.Size(229, 123);
             this.filterfrom.TabIndex = 10;
             // 
             // labelprofession
@@ -214,7 +219,7 @@ namespace gachinaruto
             this.labelprofession.Location = new System.Drawing.Point(4, 319);
             this.labelprofession.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelprofession.Name = "labelprofession";
-            this.labelprofession.Size = new System.Drawing.Size(111, 20);
+            this.labelprofession.Size = new System.Drawing.Size(87, 17);
             this.labelprofession.TabIndex = 11;
             this.labelprofession.Text = "Профессия:";
             // 
@@ -224,6 +229,7 @@ namespace gachinaruto
             this.filterprofession.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.filterprofession.FormattingEnabled = true;
             this.filterprofession.Items.AddRange(new object[] {
+            "Шиноби",
             "Ниндзя-медик",
             "Анбу",
             "Хокаге",
@@ -234,7 +240,7 @@ namespace gachinaruto
             this.filterprofession.Location = new System.Drawing.Point(4, 343);
             this.filterprofession.Margin = new System.Windows.Forms.Padding(4);
             this.filterprofession.Name = "filterprofession";
-            this.filterprofession.Size = new System.Drawing.Size(229, 130);
+            this.filterprofession.Size = new System.Drawing.Size(229, 123);
             this.filterprofession.TabIndex = 12;
             // 
             // panel1
@@ -304,7 +310,7 @@ namespace gachinaruto
             // favouritepersonpagebutton
             // 
             this.favouritepersonpagebutton.Image = ((System.Drawing.Image)(resources.GetObject("favouritepersonpagebutton.Image")));
-            this.favouritepersonpagebutton.Location = new System.Drawing.Point(1184, 34);
+            this.favouritepersonpagebutton.Location = new System.Drawing.Point(1188, 34);
             this.favouritepersonpagebutton.Name = "favouritepersonpagebutton";
             this.favouritepersonpagebutton.Size = new System.Drawing.Size(75, 75);
             this.favouritepersonpagebutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -316,7 +322,7 @@ namespace gachinaruto
             // clanpagebutton
             // 
             this.clanpagebutton.Image = ((System.Drawing.Image)(resources.GetObject("clanpagebutton.Image")));
-            this.clanpagebutton.Location = new System.Drawing.Point(1001, 34);
+            this.clanpagebutton.Location = new System.Drawing.Point(1024, 34);
             this.clanpagebutton.Name = "clanpagebutton";
             this.clanpagebutton.Size = new System.Drawing.Size(75, 75);
             this.clanpagebutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -325,11 +331,24 @@ namespace gachinaruto
             this.toolTip1.SetToolTip(this.clanpagebutton, "Кланы");
             this.clanpagebutton.Click += new System.EventHandler(this.clanpagebutton_Click);
             // 
+            // articleicon
+            // 
+            this.articleicon.Image = ((System.Drawing.Image)(resources.GetObject("articleicon.Image")));
+            this.articleicon.Location = new System.Drawing.Point(943, 34);
+            this.articleicon.Name = "articleicon";
+            this.articleicon.Size = new System.Drawing.Size(75, 75);
+            this.articleicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.articleicon.TabIndex = 19;
+            this.articleicon.TabStop = false;
+            this.toolTip1.SetToolTip(this.articleicon, "Статьи");
+            this.articleicon.Click += new System.EventHandler(this.articleicon_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.articleicon);
             this.Controls.Add(this.clanpagebutton);
             this.Controls.Add(this.favouritepersonpagebutton);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -353,6 +372,7 @@ namespace gachinaruto
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.favouritepersonpagebutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clanpagebutton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.articleicon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,6 +400,7 @@ namespace gachinaruto
         private System.Windows.Forms.PictureBox favouritepersonpagebutton;
         private System.Windows.Forms.PictureBox clanpagebutton;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox articleicon;
     }
 }
 

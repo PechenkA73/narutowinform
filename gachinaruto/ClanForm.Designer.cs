@@ -51,7 +51,7 @@ namespace gachinaruto
             this.privetusername.Location = new System.Drawing.Point(1117, 109);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(99, 25);
+            this.privetusername.Size = new System.Drawing.Size(80, 20);
             this.privetusername.TabIndex = 11;
             this.privetusername.Text = "username";
             // 
@@ -110,17 +110,18 @@ namespace gachinaruto
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 432);
+            this.panel1.Location = new System.Drawing.Point(0, 440);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1262, 241);
+            this.panel1.Size = new System.Drawing.Size(1264, 241);
             this.panel1.TabIndex = 15;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label3.Location = new System.Drawing.Point(3, 390);
+            this.label3.Location = new System.Drawing.Point(3, 403);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(434, 39);
+            this.label3.Size = new System.Drawing.Size(434, 34);
             this.label3.TabIndex = 16;
             this.label3.Text = "Известные члены клана:";
             // 
@@ -128,7 +129,7 @@ namespace gachinaruto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);

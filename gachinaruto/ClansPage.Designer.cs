@@ -37,7 +37,7 @@ namespace gachinaruto
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.herosearch = new System.Windows.Forms.Button();
+            this.clansearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -60,7 +60,7 @@ namespace gachinaruto
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label1.Location = new System.Drawing.Point(585, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 36);
+            this.label1.Size = new System.Drawing.Size(89, 29);
             this.label1.TabIndex = 18;
             this.label1.Text = "Кланы";
             // 
@@ -69,10 +69,10 @@ namespace gachinaruto
             this.privetusername.AutoSize = true;
             this.privetusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.privetusername.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.privetusername.Location = new System.Drawing.Point(1117, 111);
+            this.privetusername.Location = new System.Drawing.Point(1102, 111);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(99, 25);
+            this.privetusername.Size = new System.Drawing.Size(80, 20);
             this.privetusername.TabIndex = 17;
             this.privetusername.Text = "username";
             // 
@@ -80,10 +80,10 @@ namespace gachinaruto
             // 
             this.userpicture.Image = ((System.Drawing.Image)(resources.GetObject("userpicture.Image")));
             this.userpicture.InitialImage = null;
-            this.userpicture.Location = new System.Drawing.Point(1135, 40);
+            this.userpicture.Location = new System.Drawing.Point(1107, 32);
             this.userpicture.Margin = new System.Windows.Forms.Padding(4);
             this.userpicture.Name = "userpicture";
-            this.userpicture.Size = new System.Drawing.Size(65, 67);
+            this.userpicture.Size = new System.Drawing.Size(75, 75);
             this.userpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.userpicture.TabIndex = 16;
             this.userpicture.TabStop = false;
@@ -105,7 +105,7 @@ namespace gachinaruto
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.29703F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.70297F));
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.herosearch, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.clansearch, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(385, 79);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -124,24 +124,25 @@ namespace gachinaruto
             this.textBox1.Size = new System.Drawing.Size(346, 31);
             this.textBox1.TabIndex = 3;
             // 
-            // herosearch
+            // clansearch
             // 
-            this.herosearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.herosearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.herosearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.herosearch.Location = new System.Drawing.Point(358, 4);
-            this.herosearch.Margin = new System.Windows.Forms.Padding(4);
-            this.herosearch.Name = "herosearch";
-            this.herosearch.Size = new System.Drawing.Size(143, 31);
-            this.herosearch.TabIndex = 2;
-            this.herosearch.Text = "Поиск";
-            this.herosearch.UseVisualStyleBackColor = false;
+            this.clansearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.clansearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clansearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.clansearch.Location = new System.Drawing.Point(358, 4);
+            this.clansearch.Margin = new System.Windows.Forms.Padding(4);
+            this.clansearch.Name = "clansearch";
+            this.clansearch.Size = new System.Drawing.Size(143, 31);
+            this.clansearch.TabIndex = 2;
+            this.clansearch.Text = "Поиск";
+            this.clansearch.UseVisualStyleBackColor = false;
+            this.clansearch.Click += new System.EventHandler(this.clansearch_Click);
             // 
             // ClansPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -170,6 +171,6 @@ namespace gachinaruto
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button herosearch;
+        private System.Windows.Forms.Button clansearch;
     }
 }

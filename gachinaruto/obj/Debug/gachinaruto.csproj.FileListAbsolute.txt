@@ -69,3 +69,19 @@ D:\НГ_pk20\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowi
 D:\НГ_pk20\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.pdb
 D:\НГ_pk20\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.ClanForm.resources
 D:\НГ_pk20\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.ClansPage.resources
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\bin\Debug\gachinaruto.exe.config
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\bin\Debug\gachinaruto.exe
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\bin\Debug\gachinaruto.pdb
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.csprojAssemblyReference.cache
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.ClanForm.resources
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.ClansPage.resources
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.FavouriteCharactersPage.resources
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.MainForm.resources
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.CharacterForm.resources
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.Properties.Resources.resources
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.csproj.GenerateResource.cache
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.csproj.CoreCompileInputs.cache
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.exe
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.pdb
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.ArticlesPage.resources
+C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.ArticleForm.resources

@@ -55,10 +55,10 @@ namespace gachinaruto
             this.privetusername.AutoSize = true;
             this.privetusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.privetusername.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.privetusername.Location = new System.Drawing.Point(1117, 111);
+            this.privetusername.Location = new System.Drawing.Point(1089, 117);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(99, 25);
+            this.privetusername.Size = new System.Drawing.Size(80, 20);
             this.privetusername.TabIndex = 10;
             this.privetusername.Text = "username";
             // 
@@ -66,10 +66,10 @@ namespace gachinaruto
             // 
             this.userpicture.Image = ((System.Drawing.Image)(resources.GetObject("userpicture.Image")));
             this.userpicture.InitialImage = null;
-            this.userpicture.Location = new System.Drawing.Point(1135, 40);
+            this.userpicture.Location = new System.Drawing.Point(1093, 38);
             this.userpicture.Margin = new System.Windows.Forms.Padding(4);
             this.userpicture.Name = "userpicture";
-            this.userpicture.Size = new System.Drawing.Size(65, 67);
+            this.userpicture.Size = new System.Drawing.Size(75, 75);
             this.userpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.userpicture.TabIndex = 9;
             this.userpicture.TabStop = false;
@@ -80,7 +80,7 @@ namespace gachinaruto
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label1.Location = new System.Drawing.Point(269, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(335, 36);
+            this.label1.Size = new System.Drawing.Size(266, 29);
             this.label1.TabIndex = 11;
             this.label1.Text = "Любимые персонажи:";
             // 
@@ -99,7 +99,7 @@ namespace gachinaruto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.privetusername);

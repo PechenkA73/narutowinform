@@ -39,13 +39,13 @@ namespace gachinaruto
                 picture.Tag = person.name;
                 try
                 {
-                   picture.Load("../../Pictures/" + person.name + ".jpg");
+                    picture.Load("../../Pictures/Персонажи/" + person.name + ".jpg");
                 }
                 catch (Exception)
                 {
                     try
                     {
-                        picture.Load("../../Pictures/" + person.name + ".png");
+                        picture.Load("../../Pictures/Персонажи/" + person.name + ".png");
                     }
                     catch (Exception) { }
                 }
@@ -61,5 +61,7 @@ namespace gachinaruto
                 panel.Controls.Add(label);
             }
         }
+
     }
 }
+

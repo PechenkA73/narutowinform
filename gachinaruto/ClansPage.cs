@@ -16,21 +16,21 @@ namespace gachinaruto
         {
             InitializeComponent();
 
-            int x = 40;
+            int x = 30;
             int y = 14;
             foreach (Clan clan in MainForm.clans_list)
             {
                 clan.panel.BorderStyle = BorderStyle.FixedSingle;
                 clan.panel.Location = new Point(x, y);
-                clan.panel.Size = new Size(panel1.Width / 3  - 50, 234);
+                clan.panel.Size = new Size(panel1.Width / 3 - 50, 234);
                 clan.panel.Name = clan.name;
                 panel1.Controls.Add(clan.panel);
 
 
-                x = x + 240;
-                if (x + 200 > panel1.Width)
+                x = x + panel1.Width / 3;
+                if (x + panel1.Width / 3 - 50 > panel1.Width)
                 {
-                    x = 40;
+                    x = 30;
                     y = y + 252;
                 }
 
@@ -66,6 +66,35 @@ namespace gachinaruto
             PictureBox pb = (PictureBox)sender;
             ClanForm pf = new ClanForm(pb.Tag.ToString());
             pf.Show();
+        }
+
+        private void clansearch_Click(object sender, EventArgs e)
+        {
+            int x = 30;
+            int y = 14;
+            foreach (Clan clans in MainForm.clans_list)
+            {
+                clans.panel.Visible = true;
+                if (textBox1.Text != "" &&
+                    !clans.name.Contains(textBox1.Text))
+                {
+                    clans.panel.Visible = false;
+                }
+
+
+                if (clans.panel.Visible)
+                {
+                    clans.panel.Location = new Point(x, y);
+
+                    x = x + panel1.Width / 3;
+                    if (x + panel1.Width / 3 - 50 > panel1.Width)
+                    {
+                        x = 30;
+                        y = y + 252;
+                    }
+                }
+            }
+
         }
     }
 }

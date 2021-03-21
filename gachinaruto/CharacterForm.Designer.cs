@@ -73,10 +73,10 @@ namespace gachinaruto
             this.privetusername.AutoSize = true;
             this.privetusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.privetusername.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.privetusername.Location = new System.Drawing.Point(1117, 111);
+            this.privetusername.Location = new System.Drawing.Point(1131, 111);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(99, 25);
+            this.privetusername.Size = new System.Drawing.Size(80, 20);
             this.privetusername.TabIndex = 8;
             this.privetusername.Text = "username";
             // 
@@ -158,7 +158,7 @@ namespace gachinaruto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
