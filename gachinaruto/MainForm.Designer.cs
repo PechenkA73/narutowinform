@@ -39,7 +39,7 @@ namespace gachinaruto
             this.userpicture = new System.Windows.Forms.PictureBox();
             this.filterclan = new System.Windows.Forms.CheckedListBox();
             this.labelclan = new System.Windows.Forms.Label();
-            this.lablefrom = new System.Windows.Forms.Label();
+            this.labelfrom = new System.Windows.Forms.Label();
             this.filterfrom = new System.Windows.Forms.CheckedListBox();
             this.labelprofession = new System.Windows.Forms.Label();
             this.filterprofession = new System.Windows.Forms.CheckedListBox();
@@ -52,6 +52,8 @@ namespace gachinaruto
             this.clanpagebutton = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.articleicon = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.panel7.SuspendLayout();
@@ -105,7 +107,7 @@ namespace gachinaruto
             this.naitipersonaja.Location = new System.Drawing.Point(293, 40);
             this.naitipersonaja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.naitipersonaja.Name = "naitipersonaja";
-            this.naitipersonaja.Size = new System.Drawing.Size(147, 20);
+            this.naitipersonaja.Size = new System.Drawing.Size(182, 25);
             this.naitipersonaja.TabIndex = 4;
             this.naitipersonaja.Text = "Найти персонажа:";
             // 
@@ -116,7 +118,7 @@ namespace gachinaruto
             this.privetusername.Location = new System.Drawing.Point(1102, 112);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(84, 20);
+            this.privetusername.Size = new System.Drawing.Size(104, 25);
             this.privetusername.TabIndex = 5;
             this.privetusername.Text = " username";
             this.privetusername.Click += new System.EventHandler(this.privetusername_Click);
@@ -158,7 +160,7 @@ namespace gachinaruto
             this.filterclan.Location = new System.Drawing.Point(0, 24);
             this.filterclan.Margin = new System.Windows.Forms.Padding(4);
             this.filterclan.Name = "filterclan";
-            this.filterclan.Size = new System.Drawing.Size(229, 123);
+            this.filterclan.Size = new System.Drawing.Size(229, 109);
             this.filterclan.TabIndex = 7;
             this.filterclan.SelectedIndexChanged += new System.EventHandler(this.filterclan_SelectedIndexChanged);
             // 
@@ -169,21 +171,21 @@ namespace gachinaruto
             this.labelclan.Location = new System.Drawing.Point(4, 0);
             this.labelclan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelclan.Name = "labelclan";
-            this.labelclan.Size = new System.Drawing.Size(45, 17);
+            this.labelclan.Size = new System.Drawing.Size(55, 20);
             this.labelclan.TabIndex = 8;
             this.labelclan.Text = "Клан:";
             this.labelclan.Click += new System.EventHandler(this.labelclan_Click);
             // 
-            // lablefrom
+            // labelfrom
             // 
-            this.lablefrom.AutoSize = true;
-            this.lablefrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lablefrom.Location = new System.Drawing.Point(4, 158);
-            this.lablefrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lablefrom.Name = "lablefrom";
-            this.lablefrom.Size = new System.Drawing.Size(124, 17);
-            this.lablefrom.TabIndex = 9;
-            this.lablefrom.Text = "Принадлежность:";
+            this.labelfrom.AutoSize = true;
+            this.labelfrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelfrom.Location = new System.Drawing.Point(4, 158);
+            this.labelfrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelfrom.Name = "labelfrom";
+            this.labelfrom.Size = new System.Drawing.Size(160, 20);
+            this.labelfrom.TabIndex = 9;
+            this.labelfrom.Text = "Принадлежность:";
             // 
             // filterfrom
             // 
@@ -209,7 +211,7 @@ namespace gachinaruto
             this.filterfrom.Location = new System.Drawing.Point(0, 185);
             this.filterfrom.Margin = new System.Windows.Forms.Padding(4);
             this.filterfrom.Name = "filterfrom";
-            this.filterfrom.Size = new System.Drawing.Size(229, 123);
+            this.filterfrom.Size = new System.Drawing.Size(229, 109);
             this.filterfrom.TabIndex = 10;
             // 
             // labelprofession
@@ -219,7 +221,7 @@ namespace gachinaruto
             this.labelprofession.Location = new System.Drawing.Point(4, 319);
             this.labelprofession.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelprofession.Name = "labelprofession";
-            this.labelprofession.Size = new System.Drawing.Size(87, 17);
+            this.labelprofession.Size = new System.Drawing.Size(111, 20);
             this.labelprofession.TabIndex = 11;
             this.labelprofession.Text = "Профессия:";
             // 
@@ -240,7 +242,7 @@ namespace gachinaruto
             this.filterprofession.Location = new System.Drawing.Point(4, 343);
             this.filterprofession.Margin = new System.Windows.Forms.Padding(4);
             this.filterprofession.Name = "filterprofession";
-            this.filterprofession.Size = new System.Drawing.Size(229, 123);
+            this.filterprofession.Size = new System.Drawing.Size(229, 109);
             this.filterprofession.TabIndex = 12;
             // 
             // panel1
@@ -263,7 +265,7 @@ namespace gachinaruto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(28, 481);
+            this.button1.Location = new System.Drawing.Point(29, 481);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(181, 32);
@@ -279,7 +281,7 @@ namespace gachinaruto
             this.panel7.Controls.Add(this.filterprofession);
             this.panel7.Controls.Add(this.filterclan);
             this.panel7.Controls.Add(this.filterfrom);
-            this.panel7.Controls.Add(this.lablefrom);
+            this.panel7.Controls.Add(this.labelfrom);
             this.panel7.Controls.Add(this.labelprofession);
             this.panel7.Location = new System.Drawing.Point(1030, 147);
             this.panel7.Name = "panel7";
@@ -343,11 +345,35 @@ namespace gachinaruto
             this.toolTip1.SetToolTip(this.articleicon, "Статьи");
             this.articleicon.Click += new System.EventHandler(this.articleicon_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(1220, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(38, 28);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "EN";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.EnglishClick);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(1176, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(38, 28);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "RU";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.RussianClick);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.articleicon);
             this.Controls.Add(this.clanpagebutton);
             this.Controls.Add(this.favouritepersonpagebutton);
@@ -388,7 +414,7 @@ namespace gachinaruto
         private System.Windows.Forms.PictureBox userpicture;
         private System.Windows.Forms.CheckedListBox filterclan;
         private System.Windows.Forms.Label labelclan;
-        private System.Windows.Forms.Label lablefrom;
+        private System.Windows.Forms.Label labelfrom;
         private System.Windows.Forms.CheckedListBox filterfrom;
         private System.Windows.Forms.Label labelprofession;
         private System.Windows.Forms.CheckedListBox filterprofession;
@@ -401,6 +427,8 @@ namespace gachinaruto
         private System.Windows.Forms.PictureBox clanpagebutton;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox articleicon;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

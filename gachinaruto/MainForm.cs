@@ -95,9 +95,58 @@ namespace gachinaruto
         /// </summary>
         public static List<Article> articles_list = new List<Article>();
 
+        /// <summary>
+        /// Перевод на Русский
+        /// </summary>
+        public static Dictionary<string, string> RusWords = new Dictionary<string, string>();
+        /// <summary>
+        /// Перевод на Английский
+        /// </summary>
+        public static Dictionary<string, string> EngWords = new Dictionary<string, string>();
+
+        void FillWords()
+        {
+            RusWords.Add("Найти персонажа:", "Найти Персонажа:");
+            EngWords.Add("Найти персонажа:", "Find character:");
+            RusWords.Add("Поиск", "Поиск");
+            EngWords.Add("Поиск", "Search");
+            RusWords.Add("Клан:", "Клан:");
+            EngWords.Add("Клан:", "Clan:");
+            RusWords.Add("Принадлежность:", "Принадлежность:");
+            EngWords.Add("Принадлежность:", "From:");
+            RusWords.Add("Профессия:", "Профессия:");
+            EngWords.Add("Профессия:", "Profession:");
+            RusWords.Add("Применить", "Применить");
+            EngWords.Add("Применить", "Apply");
+        }
+
+        /// <summary>
+        /// Перевод всего на какой-то язык
+        /// </summary>
+        void RenameAll(Dictionary<string, string> Words)
+        {
+            naitipersonaja.Text = Words["Найти персонажа:"];
+            herosearch.Text = Words["Поиск"];
+            labelclan.Text = Words["Клан:"];
+            labelfrom.Text = Words["Принадлежность:"];
+            labelprofession.Text = Words["Профессия:"];
+            button1.Text = Words["Применить"];
+        }
+
+        private void RussianClick(object sender, EventArgs e)
+        {
+            RenameAll(RusWords);
+        }
+        private void EnglishClick(object sender, EventArgs e)
+        {
+            RenameAll(EngWords);
+        }
+
         public MainForm()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            
+            FillWords();
 
             articles_list.Add(new Article("Акацуки"));
             articles_list.Add(new Article("Лес Шиккоцу"));
@@ -359,19 +408,19 @@ namespace gachinaruto
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             FavouriteCharactersPage fpp = new FavouriteCharactersPage();
-            fpp.Show();
+            fpp.ShowDialog();
         }
 
         private void clanpagebutton_Click(object sender, EventArgs e)
         {
             ClansPage cpf = new ClansPage();
-            cpf.Show();
+            cpf.ShowDialog();
         }
 
         private void articleicon_Click(object sender, EventArgs e)
         {
             ArticlesPage app = new ArticlesPage();
-            app.Show();
+            app.ShowDialog();
         }
     }
 }

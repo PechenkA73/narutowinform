@@ -85,3 +85,5 @@ C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.exe
 C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.pdb
 C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.ArticlesPage.resources
 C:\Users\vlad\Downloads\narutowinform-main\gachinaruto\obj\Debug\gachinaruto.ArticleForm.resources
+D:\НГ_pk20\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.ArticleForm.resources
+D:\НГ_pk20\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.ArticlesPage.resources
