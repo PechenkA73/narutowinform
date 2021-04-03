@@ -104,3 +104,4 @@ C:\Users\beavi\Downloads\git\narutowinform\gachinaruto\obj\Debug\gachinaruto.csp
 C:\Users\beavi\Downloads\git\narutowinform\gachinaruto\obj\Debug\gachinaruto.csproj.CoreCompileInputs.cache
 C:\Users\beavi\Downloads\git\narutowinform\gachinaruto\obj\Debug\gachinaruto.exe
 C:\Users\beavi\Downloads\git\narutowinform\gachinaruto\obj\Debug\gachinaruto.pdb
+D:\НГ_pk20\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.NewElementForm.resources

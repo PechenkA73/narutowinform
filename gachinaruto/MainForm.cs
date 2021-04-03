@@ -173,10 +173,6 @@ namespace gachinaruto
                 string[] people = line.Split(new string[] { "; " }, StringSplitOptions.None);
                 if (people.Length > 3)
                     people_list.Add(new Person(people[0], people[1], people[2], people[3]));
-                else
-                {
-                    string s = "";
-                }
             }
 
 
@@ -346,24 +342,7 @@ namespace gachinaruto
                     }
                 }
             }
-            /*panel2.Visible = (filterclan.GetItemCheckState(1) == CheckState.Checked || 
-                filterfrom.GetItemCheckState(0) == CheckState.Checked ||
-                filterprofession.GetItemCheckState(0) == CheckState.Checked);
-            panel3.Visible = (filterclan.GetItemCheckState(0) == CheckState.Checked || 
-                filterfrom.GetItemCheckState(0) == CheckState.Checked);
-            panel4.Visible = (filterclan.GetItemCheckState(4) == CheckState.Checked || 
-                filterfrom.GetItemCheckState(0) == CheckState.Checked ||
-                filterprofession.GetItemCheckState(0) == CheckState.Checked);
-            panel6.Visible = (filterfrom.GetItemCheckState(0) == CheckState.Checked ||
-                filterprofession.GetItemCheckState(0) == CheckState.Checked);
-            panel8.Visible = (filterclan.GetItemCheckState(0) == CheckState.Checked ||
-                filterfrom.GetItemCheckState(0) == CheckState.Checked ||
-                filterfrom.GetItemCheckState(8) == CheckState.Checked ||
-                filterprofession.GetItemCheckState(9) == CheckState.Checked);
-            panel9.Visible = (filterclan.GetItemCheckState(0) == CheckState.Checked ||
-                filterfrom.GetItemCheckState(0) == CheckState.Checked ||
-                filterfrom.GetItemCheckState(8) == CheckState.Checked ||
-                filterfrom.GetItemCheckState(5) == CheckState.Checked);*/
+           
         }
         public static void heroClick(object sender, EventArgs e)
         {

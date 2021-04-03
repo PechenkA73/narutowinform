@@ -39,17 +39,24 @@ namespace gachinaruto
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelclan = new System.Windows.Forms.Label();
-            this.filterprofession = new System.Windows.Forms.CheckedListBox();
-            this.filterclan = new System.Windows.Forms.CheckedListBox();
-            this.filterfrom = new System.Windows.Forms.CheckedListBox();
+            this.filterprofession = new System.Windows.Forms.ComboBox();
+            this.filterclan = new System.Windows.Forms.ComboBox();
+            this.filterfrom = new System.Windows.Forms.ComboBox();
             this.labelfrom = new System.Windows.Forms.Label();
             this.labelprofession = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.characterpanel = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.articlepanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.characterpanel.SuspendLayout();
+            this.articlepanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -91,21 +98,25 @@ namespace gachinaruto
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 126);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(294, 299);
+            this.pictureBox1.Size = new System.Drawing.Size(299, 299);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Персонаж",
-            "Клан",
-            "Статья"});
+            "Персонажи",
+            "Кланы",
+            "Статьи"});
             this.comboBox1.Location = new System.Drawing.Point(366, 145);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(231, 24);
             this.comboBox1.TabIndex = 15;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -138,7 +149,7 @@ namespace gachinaruto
             // 
             this.labelclan.AutoSize = true;
             this.labelclan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelclan.Location = new System.Drawing.Point(659, 121);
+            this.labelclan.Location = new System.Drawing.Point(29, 25);
             this.labelclan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelclan.Name = "labelclan";
             this.labelclan.Size = new System.Drawing.Size(55, 20);
@@ -159,10 +170,10 @@ namespace gachinaruto
             "Мизукаге",
             "Райкаге",
             "Цучикаге"});
-            this.filterprofession.Location = new System.Drawing.Point(655, 463);
+            this.filterprofession.Location = new System.Drawing.Point(25, 161);
             this.filterprofession.Margin = new System.Windows.Forms.Padding(4);
             this.filterprofession.Name = "filterprofession";
-            this.filterprofession.Size = new System.Drawing.Size(229, 109);
+            this.filterprofession.Size = new System.Drawing.Size(229, 28);
             this.filterprofession.TabIndex = 24;
             // 
             // filterclan
@@ -186,10 +197,10 @@ namespace gachinaruto
             "Яманака",
             "Абураме",
             "Акимичи"});
-            this.filterclan.Location = new System.Drawing.Point(655, 145);
+            this.filterclan.Location = new System.Drawing.Point(25, 49);
             this.filterclan.Margin = new System.Windows.Forms.Padding(4);
             this.filterclan.Name = "filterclan";
-            this.filterclan.Size = new System.Drawing.Size(229, 109);
+            this.filterclan.Size = new System.Drawing.Size(229, 28);
             this.filterclan.TabIndex = 19;
             // 
             // filterfrom
@@ -213,17 +224,17 @@ namespace gachinaruto
             "Лес Шиккоцу",
             "Гора Мьёбоку",
             "Пещера Рьючи"});
-            this.filterfrom.Location = new System.Drawing.Point(655, 306);
+            this.filterfrom.Location = new System.Drawing.Point(25, 105);
             this.filterfrom.Margin = new System.Windows.Forms.Padding(4);
             this.filterfrom.Name = "filterfrom";
-            this.filterfrom.Size = new System.Drawing.Size(229, 109);
+            this.filterfrom.Size = new System.Drawing.Size(229, 28);
             this.filterfrom.TabIndex = 22;
             // 
             // labelfrom
             // 
             this.labelfrom.AutoSize = true;
             this.labelfrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelfrom.Location = new System.Drawing.Point(659, 279);
+            this.labelfrom.Location = new System.Drawing.Point(29, 81);
             this.labelfrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelfrom.Name = "labelfrom";
             this.labelfrom.Size = new System.Drawing.Size(160, 20);
@@ -234,7 +245,7 @@ namespace gachinaruto
             // 
             this.labelprofession.AutoSize = true;
             this.labelprofession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelprofession.Location = new System.Drawing.Point(659, 439);
+            this.labelprofession.Location = new System.Drawing.Point(29, 137);
             this.labelprofession.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelprofession.Name = "labelprofession";
             this.labelprofession.Size = new System.Drawing.Size(111, 20);
@@ -253,7 +264,7 @@ namespace gachinaruto
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(12, 435);
+            this.label3.Location = new System.Drawing.Point(7, 435);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(221, 25);
             this.label3.TabIndex = 26;
@@ -263,27 +274,71 @@ namespace gachinaruto
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button1.Location = new System.Drawing.Point(366, 346);
+            this.button1.Location = new System.Drawing.Point(363, 356);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 69);
+            this.button1.Size = new System.Drawing.Size(231, 69);
             this.button1.TabIndex = 27;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // characterpanel
+            // 
+            this.characterpanel.Controls.Add(this.labelclan);
+            this.characterpanel.Controls.Add(this.filterprofession);
+            this.characterpanel.Controls.Add(this.filterclan);
+            this.characterpanel.Controls.Add(this.filterfrom);
+            this.characterpanel.Controls.Add(this.labelfrom);
+            this.characterpanel.Controls.Add(this.labelprofession);
+            this.characterpanel.Location = new System.Drawing.Point(651, 136);
+            this.characterpanel.Name = "characterpanel";
+            this.characterpanel.Size = new System.Drawing.Size(281, 202);
+            this.characterpanel.TabIndex = 28;
+            this.characterpanel.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(12, 32);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(582, 198);
+            this.textBox3.TabIndex = 29;
+            this.textBox3.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(11, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(291, 25);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Второе поле с информацией:";
+            this.label4.Visible = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // articlepanel
+            // 
+            this.articlepanel.Controls.Add(this.label4);
+            this.articlepanel.Controls.Add(this.textBox3);
+            this.articlepanel.Location = new System.Drawing.Point(603, 431);
+            this.articlepanel.Name = "articlepanel";
+            this.articlepanel.Size = new System.Drawing.Size(608, 239);
+            this.articlepanel.TabIndex = 31;
             // 
             // NewElementForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.articlepanel);
+            this.Controls.Add(this.characterpanel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.labelclan);
-            this.Controls.Add(this.filterprofession);
-            this.Controls.Add(this.filterclan);
-            this.Controls.Add(this.filterfrom);
-            this.Controls.Add(this.labelfrom);
-            this.Controls.Add(this.labelprofession);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -299,12 +354,17 @@ namespace gachinaruto
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.characterpanel.ResumeLayout(false);
+            this.characterpanel.PerformLayout();
+            this.articlepanel.ResumeLayout(false);
+            this.articlepanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label privetusername;
@@ -315,13 +375,18 @@ namespace gachinaruto
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelclan;
-        private System.Windows.Forms.CheckedListBox filterprofession;
-        private System.Windows.Forms.CheckedListBox filterclan;
-        private System.Windows.Forms.CheckedListBox filterfrom;
+        private System.Windows.Forms.ComboBox filterprofession;
+        private System.Windows.Forms.ComboBox filterclan;
+        private System.Windows.Forms.ComboBox filterfrom;
         private System.Windows.Forms.Label labelfrom;
         private System.Windows.Forms.Label labelprofession;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel characterpanel;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Panel articlepanel;
     }
 }
