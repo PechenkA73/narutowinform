@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -106,7 +107,7 @@ namespace gachinaruto
 
         void FillWords()
         {
-            RusWords.Add("Найти персонажа:", "Найти Персонажа:");
+            RusWords.Add("Найти персонажа:", "Найти персонажа:");
             EngWords.Add("Найти персонажа:", "Find character:");
             RusWords.Add("Поиск", "Поиск");
             EngWords.Add("Поиск", "Search");
@@ -148,25 +149,38 @@ namespace gachinaruto
             
             FillWords();
 
-            articles_list.Add(new Article("Акацуки"));
-            articles_list.Add(new Article("Лес Шиккоцу"));
-            articles_list.Add(new Article("Пещера Рьючи"));
-            articles_list.Add(new Article("Гора Мьёбоку"));
-            articles_list.Add(new Article("Союзные Силы Шиноби"));
+            string[] lines = File.ReadAllLines("ArticlesFiles.txt");
+            foreach (string line in lines)
+            {
+                string[] articles = line.Split(new string[] { "," }, StringSplitOptions.None);
+                articles_list.Add(new Article(articles[0]));
+            }
 
 
 
-            clans_list.Add(new Clan("Учиха"));
-            clans_list.Add(new Clan("Узумаки"));
-            clans_list.Add(new Clan("Казекаге"));
-            clans_list.Add(new Clan("Сенджу"));
-            clans_list.Add(new Clan("Нара"));
-            clans_list.Add(new Clan("Сарутоби"));
-            clans_list.Add(new Clan("Хьюга"));
+            lines = File.ReadAllLines("ClansFiles.txt");
+            foreach (string line in lines)
+            {
+                string[] clans = line.Split(new string[] { "," }, StringSplitOptions.None);
+                clans_list.Add(new Clan(clans[0]));
+            }
 
 
 
-            people_list.Add(new Person("Наруто Узумаки", "Узумаки", "Деревня Скрытого Листа, Гора Мьёбоку, Союзные Силы Шиноби", "Хокаге"));
+            lines = File.ReadAllLines("CharactersFiles.txt");
+            foreach (string line in lines)
+            {
+                string[] people = line.Split(new string[] { "; " }, StringSplitOptions.None);
+                if (people.Length > 3)
+                    people_list.Add(new Person(people[0], people[1], people[2], people[3]));
+                else
+                {
+                    string s = "";
+                }
+            }
+
+
+            /*people_list.Add(new Person("Наруто Узумаки", "Узумаки", "Деревня Скрытого Листа, Гора Мьёбоку, Союзные Силы Шиноби", "Хокаге"));
             people_list.Add(new Person("Саске Учиха", "Учиха", "Деревня Скрытого Листа, Деревня Скрытого Звука, Пещера Рьючи, Акацуки", "Глава Клана Учиха"));
             people_list.Add(new Person("Какаши Хатаке", "Хатаке", "Деревня Скрытого Листа, Союзные Силы Шиноби", "Хокаге, Командир Третьей Дивизии Союзных Войск Шиноби"));
             people_list.Add(new Person("Минато Намиказе", "Намиказе", "Деревня Скрытого Листа, Гора Мьёбоку, Союзные Силы Шиноби", "Хокаге"));
@@ -202,7 +216,7 @@ namespace gachinaruto
             people_list.Add(new Person("Фугаку Учиха", "Учиха", "Деревня Скрытого Листа", "Глава Военной Полиции Конохи"));
             people_list.Add(new Person("Микото Учиха", "Учиха", "Деревня Скрытого Листа", "Домохозяйка"));
             people_list.Add(new Person("Джирайя", "", "Деревня Скрытого Листа, Гора Мьёбоку", "Писатель"));
-
+            */
 
 
 
@@ -421,6 +435,12 @@ namespace gachinaruto
         {
             ArticlesPage app = new ArticlesPage();
             app.ShowDialog();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            NewElementForm nel = new NewElementForm();
+            nel.ShowDialog();
         }
     }
 }
