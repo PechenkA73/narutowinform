@@ -54,6 +54,7 @@ namespace gachinaruto
             this.articleicon = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.newelementicon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.panel7.SuspendLayout();
@@ -61,6 +62,7 @@ namespace gachinaruto
             ((System.ComponentModel.ISupportInitialize)(this.favouritepersonpagebutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clanpagebutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articleicon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newelementicon)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -348,7 +350,7 @@ namespace gachinaruto
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(1220, 0);
+            this.button2.Location = new System.Drawing.Point(56, 113);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(38, 28);
             this.button2.TabIndex = 20;
@@ -359,7 +361,7 @@ namespace gachinaruto
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(1176, 0);
+            this.button3.Location = new System.Drawing.Point(12, 113);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(38, 28);
             this.button3.TabIndex = 21;
@@ -367,11 +369,23 @@ namespace gachinaruto
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.RussianClick);
             // 
+            // newelementicon
+            // 
+            this.newelementicon.Image = ((System.Drawing.Image)(resources.GetObject("newelementicon.Image")));
+            this.newelementicon.Location = new System.Drawing.Point(862, 34);
+            this.newelementicon.Name = "newelementicon";
+            this.newelementicon.Size = new System.Drawing.Size(75, 75);
+            this.newelementicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.newelementicon.TabIndex = 22;
+            this.newelementicon.TabStop = false;
+            this.newelementicon.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.newelementicon);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.articleicon);
@@ -399,6 +413,7 @@ namespace gachinaruto
             ((System.ComponentModel.ISupportInitialize)(this.favouritepersonpagebutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clanpagebutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.articleicon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newelementicon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,6 +444,7 @@ namespace gachinaruto
         private System.Windows.Forms.PictureBox articleicon;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox newelementicon;
     }
 }
 
