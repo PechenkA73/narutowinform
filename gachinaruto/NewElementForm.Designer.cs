@@ -350,7 +350,7 @@ namespace gachinaruto
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "NewElementForm";
-            this.Text = "NewElementForm";
+            this.Text = "New element page";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

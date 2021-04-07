@@ -23,16 +23,44 @@ namespace gachinaruto
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool hasalreadybeen = false;
+          
             if (comboBox1.Text == "Персонажи")
             {
+                foreach(Person character in MainForm.people_list)
+                {
+                    if (character.name == textBox1.Text.Trim())
+                    {
+                        hasalreadybeen = true;
+                    }
+                }
+
+                if(hasalreadybeen)
+                {
+                    MessageBox.Show("Такой персонаж уже существует");
+                    return;
+                }
                 File.AppendAllText("CharactersFiles.txt", Environment.NewLine +
-                  textBox1.Text + "; " + filterclan.Text + "; " + filterfrom.Text + "; " + filterprofession.Text);
+                  textBox1.Text.Trim() + "; " + filterclan.Text + "; " + filterfrom.Text + "; " + filterprofession.Text);
                 FileStream fsc = File.Create("../../Files/" + comboBox1.Text + "/" + textBox1.Text + ".txt");
                 fsc.Close();
                 File.WriteAllText("../../Files/" + comboBox1.Text + "/" + textBox1.Text + ".txt", textBox2.Text);
             }
             else if(comboBox1.Text == "Кланы")
             {
+                foreach(Clan clan in MainForm.clans_list)
+                {
+                    if (clan.name == textBox1.Text.Trim())
+                    {
+                        hasalreadybeen = true;
+                    }
+                }
+
+                if (hasalreadybeen)
+                {
+                    MessageBox.Show("Такой клан уже существует");
+                    return;
+                }
                 File.AppendAllText("ClansFiles.txt", Environment.NewLine + textBox1.Text);
                 FileStream fsc = File.Create("../../Files/" + comboBox1.Text + "/" + textBox1.Text + ".txt");
                 fsc.Close();
@@ -40,6 +68,19 @@ namespace gachinaruto
             }
             else if(comboBox1.Text == "Статьи")
             {
+                foreach(Article article in MainForm.articles_list)
+                {
+                    if (article.name == textBox1.Text.Trim())
+                    {
+                        hasalreadybeen = true;
+                    }
+                }
+
+                if (hasalreadybeen)
+                {
+                    MessageBox.Show("Такая статья уже существует");
+                    return;
+                }
                 File.AppendAllText("ArticlesFiles.txt", Environment.NewLine + textBox1.Text);
                 FileStream fsc = File.Create("../../Files/" + comboBox1.Text + "/" + textBox1.Text + "(1)" + ".txt");
                 fsc.Close();
