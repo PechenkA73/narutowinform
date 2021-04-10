@@ -60,8 +60,24 @@ namespace gachinaruto
                 label.Text = person.name;
                 panel.Controls.Add(label);
             }
-        }
 
+            if (MainForm.Language == "Russian")
+                RenameAll(MainForm.RusWords);
+            else if (MainForm.Language == "English")
+                RenameAll(MainForm.EngWords);
+        }
+        void RenameAll(Dictionary<string, string> Words)
+        {
+            try
+            {
+                Text = Words["Страница с любимыми персонажами"];
+                label1.Text = Words["Любимые персонажи"] + ":";
+            }
+            catch (Exception e)
+            {
+                string s = e.Message;
+            }
+        }
     }
 }
 

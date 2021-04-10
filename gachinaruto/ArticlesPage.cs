@@ -61,6 +61,10 @@ namespace gachinaruto
                 article.panel.Controls.Add(article.label);
             }
 
+            if (MainForm.Language == "Russian")
+                RenameAll(MainForm.RusWords);
+            else if (MainForm.Language == "English")
+                RenameAll(MainForm.EngWords);
         }
         public static void articleClick(object sender, EventArgs e)
         {
@@ -96,6 +100,22 @@ namespace gachinaruto
                 }
             }
 
+        }
+
+        void RenameAll(Dictionary<string, string> Words)
+        {
+            try
+            {
+                Text = Words["Страница со статьями"];
+                label1.Text = Words["Найти статью:"];
+                articlesearch.Text = Words["Поиск"];
+               
+             
+            }
+            catch (Exception e)
+            {
+                string s = e.Message;
+            }
         }
     }
 }

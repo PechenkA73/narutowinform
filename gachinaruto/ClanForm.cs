@@ -21,6 +21,8 @@ namespace gachinaruto
             clanName = _name;
             InitializeComponent();
             Text = "Клан " + clanName;
+
+
             try
             {
                 pictureBox1.Load("../../Pictures/Кланы/" + clanName + ".jpg");
@@ -38,6 +40,7 @@ namespace gachinaruto
             label2.Text =
                 File.ReadAllText("../../Files/Кланы/" + clanName + ".txt");
 
+            //Участники клана
             int x = 10;
             foreach(Person pers in MainForm.people_list)
             {
@@ -81,11 +84,40 @@ namespace gachinaruto
                     panel.Controls.Add(label);
                 }
             }
+
+
+            if (MainForm.Language == "Russian")
+                RenameAll(MainForm.RusWords);
+            else if (MainForm.Language == "English")
+                RenameAll(MainForm.EngWords);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ClanForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Перевод всего на какой-то язык
+        /// </summary>
+        void RenameAll(Dictionary<string, string> Words)
+        {
+            try 
+            { 
+                label1.Text = Words["Клан"] + " " + clanName;
+                label3.Text = Words["Известные члены клана:"];
+                Text = Words["Клан"] + " " + clanName;
+                label4.Text = Words["Описание:"];
+            }
+            catch (Exception e)
+            {
+                string s = e.Message;
+            }
         }
     }
 }

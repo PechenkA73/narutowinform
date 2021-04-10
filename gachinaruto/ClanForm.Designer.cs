@@ -38,6 +38,7 @@ namespace gachinaruto
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,7 +52,7 @@ namespace gachinaruto
             this.privetusername.Location = new System.Drawing.Point(1117, 109);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(80, 20);
+            this.privetusername.Size = new System.Drawing.Size(99, 25);
             this.privetusername.TabIndex = 11;
             this.privetusername.Text = "username";
             // 
@@ -110,9 +111,9 @@ namespace gachinaruto
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 440);
+            this.panel1.Location = new System.Drawing.Point(0, 432);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1264, 241);
+            this.panel1.Size = new System.Drawing.Size(1262, 241);
             this.panel1.TabIndex = 15;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -125,11 +126,22 @@ namespace gachinaruto
             this.label3.TabIndex = 16;
             this.label3.Text = "Известные члены клана:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(12, 113);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 20);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Описание:";
+            // 
             // ClanForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
@@ -142,6 +154,7 @@ namespace gachinaruto
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "ClanForm";
             this.Text = "Clan page";
+            this.Load += new System.EventHandler(this.ClanForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -160,5 +173,6 @@ namespace gachinaruto
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

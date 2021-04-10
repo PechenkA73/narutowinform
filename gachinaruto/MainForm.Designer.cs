@@ -234,6 +234,7 @@ namespace gachinaruto
             this.filterprofession.FormattingEnabled = true;
             this.filterprofession.Items.AddRange(new object[] {
             "Шиноби",
+            "Ниндзя-отступник",
             "Ниндзя-медик",
             "Анбу",
             "Хокаге",
@@ -402,7 +403,7 @@ namespace gachinaruto
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainForm";
-            this.Text = "Main page";
+            this.Text = "Главная страница";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();

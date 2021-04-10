@@ -143,13 +143,13 @@ namespace gachinaruto
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label5.Location = new System.Drawing.Point(991, 130);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label5.Location = new System.Drawing.Point(996, 127);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(297, 31);
+            this.label5.Size = new System.Drawing.Size(267, 31);
             this.label5.TabIndex = 31;
             this.label5.Text = "Известные персонажи";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ArticleForm
             // 

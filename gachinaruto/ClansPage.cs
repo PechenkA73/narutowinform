@@ -60,6 +60,11 @@ namespace gachinaruto
                 clan.label.Text = clan.name;
                 clan.panel.Controls.Add(clan.label);
             }
+
+            if (MainForm.Language == "Russian")
+                RenameAll(MainForm.RusWords);
+            else if (MainForm.Language == "English")
+                RenameAll(MainForm.EngWords);
         }
         public static void clanClick(object sender, EventArgs e)
         {
@@ -95,6 +100,19 @@ namespace gachinaruto
                 }
             }
 
+        }
+        void RenameAll(Dictionary<string, string> Words)
+        {
+            try
+            {
+                Text = Words["Страница с кланами"];
+                label1.Text = Words["Кланы"];
+                clansearch.Text = Words["Поиск"];
+            }
+            catch (Exception e)
+            {
+                string s = e.Message;
+            }
         }
     }
 }

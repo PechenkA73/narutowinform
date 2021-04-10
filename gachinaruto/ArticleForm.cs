@@ -92,8 +92,25 @@ namespace gachinaruto
                     panel.Controls.Add(label);
                 }
             }
+
+            if (MainForm.Language == "Russian")
+                RenameAll(MainForm.RusWords);
+            else if (MainForm.Language == "English")
+                RenameAll(MainForm.EngWords);
         }
 
-        
+        void RenameAll(Dictionary<string, string> Words)
+        {
+            try
+            {
+                label3.Text = Words["Обзор"];
+                label5.Text = Words["Известные персонажи"];
+            }
+            catch (Exception e)
+            {
+                string s = e.Message;
+            }
+        }
+
     }
 }

@@ -16,10 +16,9 @@ namespace gachinaruto
         /// <summary>
         /// Что за персонаж тут открыт
         /// </summary>
-        string name;
-        public CharacterForm(string _name)
+        Person hero;
+        public CharacterForm(string name)
         {
-            name = _name;
             InitializeComponent();
             Text = name;
             try
@@ -38,13 +37,14 @@ namespace gachinaruto
             label1.Text = name;
             label2.Text =
                 File.ReadAllText("../../Files/Персонажи/" + name + ".txt");
-            foreach (Person hero in MainForm.people_list)
+            foreach (Person hero1 in MainForm.people_list)
             {
-                if (hero.name == name)
+                if (hero1.name == name)
                 {
-                    label3.Text = "Клан: " + hero.clan;
-                    label4.Text = "Принадлежность: " + hero.from;
-                    label5.Text = "Профессия: " + hero.profession;
+                    hero = hero1;
+                    label3.Text = "Клан:" + " " + hero.clan;
+                    label4.Text = "Принадлежность:" + " " + hero.from;
+                    label5.Text = "Профессия:" + " " + hero.profession;
 
                     if (MainForm.favCharacters.Contains(hero))
                     {
@@ -54,6 +54,10 @@ namespace gachinaruto
 
             }
 
+            if (MainForm.Language == "Russian")
+                RenameAll(MainForm.RusWords);
+            else if (MainForm.Language == "English")
+                RenameAll(MainForm.EngWords);
         } 
 
         private void PersonForm_Load(object sender, EventArgs e)
@@ -73,27 +77,36 @@ namespace gachinaruto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Бегаем по всем
-            foreach(Person person in MainForm.people_list)
+            //Если нашли нужного
+            if (button1.Text == "Добавить в любимых персонажей" &&
+                !MainForm.favCharacters.Contains(hero))
             {
-                //Если нашли нужного
-                if (button1.Text == "Добавить в любимых персонажей" &&
-                    person.name == name &&
-                    !MainForm.favCharacters.Contains(person))
-                {
-                    //Добавляем в список любимых
-                    MainForm.favCharacters.Add(person);
-                    button1.Text = "Убрать из любимых персонажей";
-                }
-                else if (button1.Text == "Убрать из любимых персонажей" &&
-                         person.name == name &&
-                         MainForm.favCharacters.Contains(person))
-                {
-                    //Убираем из списка любимых
-                    MainForm.favCharacters.Remove(person);
-                    button1.Text = "Добавить в любимых персонажей";
-                }
+                //Добавляем в список любимых
+                MainForm.favCharacters.Add(hero);
+                button1.Text = "Убрать из любимых персонажей";
+            }
+            else if (button1.Text == "Убрать из любимых персонажей" &&
+                        MainForm.favCharacters.Contains(hero))
+            {
+                //Убираем из списка любимых
+                MainForm.favCharacters.Remove(hero);
+                button1.Text = "Добавить в любимых персонажей";
+            }
+        }
+
+        void RenameAll(Dictionary<string, string> Words)
+        {
+            try
+            {
                 
+                label3.Text = Words["Клан:"] + " "  + hero.clan;
+                label4.Text = Words["Принадлежность:"] + " "  + hero.from;
+                label5.Text = Words["Профессия:"] + " "  + hero.profession;
+                label6.Text = Words["Описание:"];
+            }
+            catch (Exception e)
+            {
+                string s = e.Message;
             }
         }
     }

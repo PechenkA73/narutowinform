@@ -33,7 +33,7 @@ namespace gachinaruto
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.articlesearch = new System.Windows.Forms.Button();
-            this.naitipersonaja = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.userpicture = new System.Windows.Forms.PictureBox();
             this.privetusername = new System.Windows.Forms.Label();
@@ -82,16 +82,16 @@ namespace gachinaruto
             this.articlesearch.UseVisualStyleBackColor = false;
             this.articlesearch.Click += new System.EventHandler(this.articlesearch_Click);
             // 
-            // naitipersonaja
+            // label1
             // 
-            this.naitipersonaja.AutoSize = true;
-            this.naitipersonaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.naitipersonaja.Location = new System.Drawing.Point(289, 38);
-            this.naitipersonaja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.naitipersonaja.Name = "naitipersonaja";
-            this.naitipersonaja.Size = new System.Drawing.Size(121, 20);
-            this.naitipersonaja.TabIndex = 18;
-            this.naitipersonaja.Text = "Найти cтатью:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(289, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 25);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Найти cтатью:";
             // 
             // pictureBox2
             // 
@@ -123,7 +123,7 @@ namespace gachinaruto
             this.privetusername.Location = new System.Drawing.Point(1092, 91);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(84, 20);
+            this.privetusername.Size = new System.Drawing.Size(104, 25);
             this.privetusername.TabIndex = 20;
             this.privetusername.Text = " username";
             // 
@@ -142,12 +142,12 @@ namespace gachinaruto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.userpicture);
             this.Controls.Add(this.privetusername);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.naitipersonaja);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
@@ -167,7 +167,7 @@ namespace gachinaruto
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button articlesearch;
-        private System.Windows.Forms.Label naitipersonaja;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox userpicture;
         private System.Windows.Forms.Label privetusername;

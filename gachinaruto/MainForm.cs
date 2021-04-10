@@ -96,6 +96,7 @@ namespace gachinaruto
         /// </summary>
         public static List<Article> articles_list = new List<Article>();
 
+        public static string Language = "Russian";
         /// <summary>
         /// Перевод на Русский
         /// </summary>
@@ -107,18 +108,71 @@ namespace gachinaruto
 
         void FillWords()
         {
+            /// <summary>
+            /// Перевод главной страницы
+            /// </summary>
+            RusWords.Add("Главная страница", "Главная страница");
             RusWords.Add("Найти персонажа:", "Найти персонажа:");
-            EngWords.Add("Найти персонажа:", "Find character:");
             RusWords.Add("Поиск", "Поиск");
-            EngWords.Add("Поиск", "Search");
             RusWords.Add("Клан:", "Клан:");
-            EngWords.Add("Клан:", "Clan:");
-            RusWords.Add("Принадлежность:", "Принадлежность:");
-            EngWords.Add("Принадлежность:", "From:");
+            RusWords.Add("Принадлежность:", "Принадлежность:");         
             RusWords.Add("Профессия:", "Профессия:");
-            EngWords.Add("Профессия:", "Profession:");
             RusWords.Add("Применить", "Применить");
+            RusWords.Add("Любимые персонажи", "Любимые персонажи");
+            RusWords.Add("Кланы", "Кланы");
+            RusWords.Add("Статьи", "Статьи");
+            
+            EngWords.Add("Главная страница", "Main page");
+            EngWords.Add("Найти персонажа:", "Find character:");
+            EngWords.Add("Поиск", "Search");
+            EngWords.Add("Клан:", "Clan:");
+            EngWords.Add("Принадлежность:", "From:");
+            EngWords.Add("Профессия:", "Profession:");
             EngWords.Add("Применить", "Apply");
+            EngWords.Add("Любимые персонажи", "Favourite characters");
+            EngWords.Add("Кланы", "Clans");
+            EngWords.Add("Статьи", "Articles");
+
+            /// <summary>
+            /// Перевод страницы с кланом
+            /// </summary>
+            RusWords.Add("Известные члены клана:", "Известные члены клана:");
+            RusWords.Add("Клан", "Клан");
+            RusWords.Add("Описание:", "Описание:");
+
+            EngWords.Add("Известные члены клана:", "Famous clan members:");
+            EngWords.Add("Клан", "Clan");
+            EngWords.Add("Описание:", "Description:");
+
+            /// <summary>
+            /// Перевод страницы с любимыми персонажами
+            /// </summary>
+            RusWords.Add("Страница с любимыми персонажами", "Страница с любимыми персонажами");
+            EngWords.Add("Страница с любимыми персонажами", "Favourite characters page");
+
+            /// <summary>
+            /// Перевод страницы с поиском кланов
+            /// </summary>
+            RusWords.Add("Страница с кланами", "Страница с кланами");
+            EngWords.Add("Страница с кланами", "Clans page");
+
+            /// <summary>
+            /// Перевод страницы с поиском статей
+            /// </summary>
+            RusWords.Add("Страница со статьями", "Страница со статьями");
+            RusWords.Add("Найти статью:", "Найти статью:");
+
+            EngWords.Add("Страница со статьями", "Articles page");
+            EngWords.Add("Найти статью:", "Find article:");
+
+            /// <summary>
+            /// Перевод страницы со статьёй
+            /// </summary>
+            RusWords.Add("Обзор", "Обзор");
+            RusWords.Add("Известные персонажи", "Известные персонажи");
+
+            EngWords.Add("Обзор", "Review");
+            EngWords.Add("Известные персонажи", "Famous characters");
         }
 
         /// <summary>
@@ -126,21 +180,35 @@ namespace gachinaruto
         /// </summary>
         void RenameAll(Dictionary<string, string> Words)
         {
-            naitipersonaja.Text = Words["Найти персонажа:"];
-            herosearch.Text = Words["Поиск"];
-            labelclan.Text = Words["Клан:"];
-            labelfrom.Text = Words["Принадлежность:"];
-            labelprofession.Text = Words["Профессия:"];
-            button1.Text = Words["Применить"];
+            try
+            {
+                Text = Words["Главная страница"];
+                naitipersonaja.Text = Words["Найти персонажа:"];
+                herosearch.Text = Words["Поиск"];
+                labelclan.Text = Words["Клан:"];
+                labelfrom.Text = Words["Принадлежность:"];
+                labelprofession.Text = Words["Профессия:"];
+                button1.Text = Words["Применить"];
+                toolTip1.SetToolTip(articleicon, Words ["Статьи"]);
+                toolTip1.SetToolTip(clanpagebutton, Words ["Кланы"]);
+                string FavPersons = Words["Любимые персонажи"];
+                toolTip1.SetToolTip(favouritepersonpagebutton, FavPersons);
+            }
+            catch (Exception e)
+            {
+                string s = e.Message;
+            }
         }
 
         private void RussianClick(object sender, EventArgs e)
         {
             RenameAll(RusWords);
+            Language = "Russian";
         }
         private void EnglishClick(object sender, EventArgs e)
         {
             RenameAll(EngWords);
+            Language = "English";
         }
 
         public MainForm()
