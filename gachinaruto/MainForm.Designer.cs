@@ -100,7 +100,7 @@ namespace gachinaruto
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(346, 31);
             this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            
             // 
             // naitipersonaja
             // 
@@ -117,13 +117,13 @@ namespace gachinaruto
             // 
             this.privetusername.AutoSize = true;
             this.privetusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.privetusername.Location = new System.Drawing.Point(1102, 112);
+            this.privetusername.Location = new System.Drawing.Point(1101, 112);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
             this.privetusername.Size = new System.Drawing.Size(104, 25);
             this.privetusername.TabIndex = 5;
             this.privetusername.Text = " username";
-            this.privetusername.Click += new System.EventHandler(this.privetusername_Click);
+            
             // 
             // userpicture
             // 
@@ -164,7 +164,7 @@ namespace gachinaruto
             this.filterclan.Name = "filterclan";
             this.filterclan.Size = new System.Drawing.Size(229, 109);
             this.filterclan.TabIndex = 7;
-            this.filterclan.SelectedIndexChanged += new System.EventHandler(this.filterclan_SelectedIndexChanged);
+           
             // 
             // labelclan
             // 
@@ -176,7 +176,7 @@ namespace gachinaruto
             this.labelclan.Size = new System.Drawing.Size(55, 20);
             this.labelclan.TabIndex = 8;
             this.labelclan.Text = "Клан:";
-            this.labelclan.Click += new System.EventHandler(this.labelclan_Click);
+           
             // 
             // labelfrom
             // 
@@ -259,7 +259,7 @@ namespace gachinaruto
             this.panel1.Size = new System.Drawing.Size(1004, 519);
             this.panel1.TabIndex = 13;
             this.panel1.Click += new System.EventHandler(this.button1_Click);
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            
             // 
             // button1
             // 
@@ -290,7 +290,7 @@ namespace gachinaruto
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(233, 519);
             this.panel7.TabIndex = 15;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            
             // 
             // tableLayoutPanel1
             // 
@@ -404,7 +404,7 @@ namespace gachinaruto
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainForm";
             this.Text = "Главная страница";
-            this.Load += new System.EventHandler(this.Form1_Load);
+          
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();
             this.panel7.ResumeLayout(false);

@@ -298,26 +298,8 @@ namespace gachinaruto
 
         private void userpicture_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void labelclan_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void filterclan_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            UserForm uf = new UserForm();
+            uf.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -381,21 +363,7 @@ namespace gachinaruto
             CharacterForm pf = new CharacterForm(pb.Tag.ToString());
             pf.Show();
         }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void privetusername_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void herosearch_Click(object sender, EventArgs e)
         {
             int x = 40;
@@ -424,10 +392,7 @@ namespace gachinaruto
             }
         }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
