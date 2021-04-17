@@ -40,11 +40,38 @@ namespace gachinaruto
                     MessageBox.Show("Такой персонаж уже существует");
                     return;
                 }
+
+                string clans = "";
+                foreach (string item in filterclan.CheckedItems)
+                    clans += ", " + item;
+                if (clans.Length > 0)
+                {
+                    clans = clans.Substring(2);
+                }
+
+
+                string from = "";
+                foreach (string item in filterfrom.CheckedItems)
+                    from += ", " + item;
+                if (from.Length > 0)
+                {
+                    from = from.Substring(2);
+                }
+
+
+                string professions = "";
+                foreach (string item in filterprofession.CheckedItems)
+                    professions += ", " + item;
+                if (professions.Length > 0)
+                {
+                    professions = professions.Substring(2);
+                }
+
                 File.AppendAllText("CharactersFiles.txt", Environment.NewLine +
-                  textBox1.Text.Trim() + "; " + filterclan.Text + "; " + filterfrom.Text + "; " + filterprofession.Text);
-                FileStream fsc = File.Create("../../Files/" + comboBox1.Text + "/" + textBox1.Text + ".txt");
+                  textBox1.Text.Trim() + "; " + clans + "; " + from + "; " + professions);
+                FileStream fsc = File.Create("../../Files/Персонажи/" + textBox1.Text + ".txt");
                 fsc.Close();
-                File.WriteAllText("../../Files/" + comboBox1.Text + "/" + textBox1.Text + ".txt", textBox2.Text);
+                File.WriteAllText("../../Files/Персонажи/" + textBox1.Text + ".txt", textBox2.Text);
             }
             else if(comboBox1.Text == "Кланы")
             {
@@ -62,9 +89,9 @@ namespace gachinaruto
                     return;
                 }
                 File.AppendAllText("ClansFiles.txt", Environment.NewLine + textBox1.Text);
-                FileStream fsc = File.Create("../../Files/" + comboBox1.Text + "/" + textBox1.Text + ".txt");
+                FileStream fsc = File.Create("../../Files/Кланы/" + textBox1.Text + ".txt");
                 fsc.Close();
-                File.WriteAllText("../../Files/" + comboBox1.Text + "/" + textBox1.Text + ".txt", textBox2.Text);
+                File.WriteAllText("../../Files/Кланы/" + textBox1.Text + ".txt", textBox2.Text);
             }
             else if(comboBox1.Text == "Статьи")
             {
@@ -82,13 +109,13 @@ namespace gachinaruto
                     return;
                 }
                 File.AppendAllText("ArticlesFiles.txt", Environment.NewLine + textBox1.Text);
-                FileStream fsc = File.Create("../../Files/" + comboBox1.Text + "/" + textBox1.Text + "(1)" + ".txt");
+                FileStream fsc = File.Create("../../Files/Статьи/" + textBox1.Text + "(1)" + ".txt");
                 fsc.Close();
-                File.WriteAllText("../../Files/" + comboBox1.Text + "/" + textBox1.Text + "(1)" + ".txt", textBox2.Text);
+                File.WriteAllText("../../Files/Статьи/" + textBox1.Text + "(1)" + ".txt", textBox2.Text);
 
-                FileStream fcc = File.Create("../../Files/" + comboBox1.Text + "/" + textBox1.Text + "(2)" + ".txt");
+                FileStream fcc = File.Create("../../Files/Статьи/" + textBox1.Text + "(2)" + ".txt");
                 fcc.Close();
-                File.WriteAllText("../../Files/" + comboBox1.Text + "/" + textBox1.Text + "(2)" + ".txt", textBox3.Text);
+                File.WriteAllText("../../Files/Статьи/" + textBox1.Text + "(2)" + ".txt", textBox3.Text);
             }
         
             if(address != "")

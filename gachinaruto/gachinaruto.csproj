@@ -70,6 +70,12 @@
     <Compile Include="ClansPage.Designer.cs">
       <DependentUpon>ClansPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="FavCharacterUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FavCharacterUC.Designer.cs">
+      <DependentUpon>FavCharacterUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="FavouriteCharactersPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClansPage.resx">
       <DependentUpon>ClansPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavCharacterUC.resx">
+      <DependentUpon>FavCharacterUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FavouriteCharactersPage.resx">
       <DependentUpon>FavouriteCharactersPage.cs</DependentUpon>
