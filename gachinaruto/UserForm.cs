@@ -13,6 +13,9 @@ namespace gachinaruto
 {
     public partial class UserForm : Form
     {
+        public static string Login = "";
+        public static string Image = "";
+
         public UserForm()
         {
             InitializeComponent();
@@ -49,11 +52,26 @@ namespace gachinaruto
         {
             if (button2.Text == "Подтвердить")
             {
-                File.AppendAllText("../../Files/Data Files.txt", textBox1.Text + " " + "," + textBox2.Text);
+                File.AppendAllText("../../Files/Data Files.txt", 
+                    Environment.NewLine + textBox1.Text + 
+                    Environment.NewLine + textBox2.Text);
+                button1_Click(sender, e);
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
             else if(button2.Text == "Войти")
             {
-                File.ReadAllLines("../../Files/Data Files.txt");
+                string[] lines = File.ReadAllLines("../../Files/Data Files.txt");
+                for(int i = 0; i < lines.Length; i += 2)
+                {
+                    Login = textBox1.Text;
+                    if(textBox1.Text == lines[i] && textBox2.Text == lines[i+1])
+                    {
+                        MessageBox.Show("Приветсвуем," + Login + "!");
+                        Close();
+                    }
+                }
+
             }
 
             if (address != "")

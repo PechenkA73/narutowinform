@@ -18,6 +18,9 @@ namespace gachinaruto
         string clanName;
         public ClanForm(string _name)
         {
+            privetusername.Text = UserForm.Login;
+            userpicture.Load("../../Pictures/Users/" + UserForm.Login + ".jpg");
+
             clanName = _name;
             InitializeComponent();
             Text = "Клан " + clanName;

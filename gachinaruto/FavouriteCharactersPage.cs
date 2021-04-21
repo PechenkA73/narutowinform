@@ -15,6 +15,10 @@ namespace gachinaruto
         public FavouriteCharactersPage()
         {
             InitializeComponent();
+
+            privetusername.Text = UserForm.Login;
+            userpicture.Load("../../Pictures/Users/" + UserForm.Login + ".jpg");
+
             int x = 40;
             int y = 14;
             foreach (Person person in MainForm.favCharacters)

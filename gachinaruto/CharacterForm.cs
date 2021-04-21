@@ -20,6 +20,10 @@ namespace gachinaruto
         public CharacterForm(string name)
         {
             InitializeComponent();
+
+            privetusername.Text = UserForm.Login;
+            userpicture.Load("../../Pictures/Users/" + UserForm.Login + ".jpg");
+
             Text = name;
             try
             {

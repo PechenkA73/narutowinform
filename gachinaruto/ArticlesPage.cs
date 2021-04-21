@@ -16,6 +16,9 @@ namespace gachinaruto
         {
             InitializeComponent();
 
+            privetusername.Text = UserForm.Login;
+            userpicture.Load("../../Pictures/Users/" + UserForm.Login + ".jpg");
+
             int x = 30;
             int y = 14;
             foreach (Article article in MainForm.articles_list)

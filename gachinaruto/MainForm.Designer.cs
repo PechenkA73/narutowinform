@@ -35,8 +35,6 @@ namespace gachinaruto
             this.herosearch = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.naitipersonaja = new System.Windows.Forms.Label();
-            this.privetusername = new System.Windows.Forms.Label();
-            this.userpicture = new System.Windows.Forms.PictureBox();
             this.filterclan = new System.Windows.Forms.CheckedListBox();
             this.labelclan = new System.Windows.Forms.Label();
             this.labelfrom = new System.Windows.Forms.Label();
@@ -55,14 +53,16 @@ namespace gachinaruto
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.newelementicon = new System.Windows.Forms.PictureBox();
+            this.privetusername = new System.Windows.Forms.Label();
+            this.userpicture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.panel7.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.favouritepersonpagebutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clanpagebutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.articleicon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newelementicon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -100,7 +100,6 @@ namespace gachinaruto
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(346, 31);
             this.textBox1.TabIndex = 3;
-            
             // 
             // naitipersonaja
             // 
@@ -112,31 +111,6 @@ namespace gachinaruto
             this.naitipersonaja.Size = new System.Drawing.Size(182, 25);
             this.naitipersonaja.TabIndex = 4;
             this.naitipersonaja.Text = "Найти персонажа:";
-            // 
-            // privetusername
-            // 
-            this.privetusername.AutoSize = true;
-            this.privetusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.privetusername.Location = new System.Drawing.Point(1101, 112);
-            this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(104, 25);
-            this.privetusername.TabIndex = 5;
-            this.privetusername.Text = " username";
-            
-            // 
-            // userpicture
-            // 
-            this.userpicture.Image = ((System.Drawing.Image)(resources.GetObject("userpicture.Image")));
-            this.userpicture.InitialImage = null;
-            this.userpicture.Location = new System.Drawing.Point(1106, 34);
-            this.userpicture.Margin = new System.Windows.Forms.Padding(4);
-            this.userpicture.Name = "userpicture";
-            this.userpicture.Size = new System.Drawing.Size(75, 75);
-            this.userpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userpicture.TabIndex = 6;
-            this.userpicture.TabStop = false;
-            this.userpicture.Click += new System.EventHandler(this.userpicture_Click);
             // 
             // filterclan
             // 
@@ -164,7 +138,6 @@ namespace gachinaruto
             this.filterclan.Name = "filterclan";
             this.filterclan.Size = new System.Drawing.Size(229, 109);
             this.filterclan.TabIndex = 7;
-           
             // 
             // labelclan
             // 
@@ -176,7 +149,6 @@ namespace gachinaruto
             this.labelclan.Size = new System.Drawing.Size(55, 20);
             this.labelclan.TabIndex = 8;
             this.labelclan.Text = "Клан:";
-           
             // 
             // labelfrom
             // 
@@ -259,7 +231,6 @@ namespace gachinaruto
             this.panel1.Size = new System.Drawing.Size(1004, 519);
             this.panel1.TabIndex = 13;
             this.panel1.Click += new System.EventHandler(this.button1_Click);
-            
             // 
             // button1
             // 
@@ -290,7 +261,6 @@ namespace gachinaruto
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(233, 519);
             this.panel7.TabIndex = 15;
-            
             // 
             // tableLayoutPanel1
             // 
@@ -379,7 +349,32 @@ namespace gachinaruto
             this.newelementicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.newelementicon.TabIndex = 22;
             this.newelementicon.TabStop = false;
+            this.newelementicon.Visible = false;
             this.newelementicon.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // privetusername
+            // 
+            this.privetusername.AutoSize = true;
+            this.privetusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.privetusername.Location = new System.Drawing.Point(1101, 112);
+            this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.privetusername.Name = "privetusername";
+            this.privetusername.Size = new System.Drawing.Size(104, 25);
+            this.privetusername.TabIndex = 5;
+            this.privetusername.Text = " username";
+            // 
+            // userpicture
+            // 
+            this.userpicture.Image = ((System.Drawing.Image)(resources.GetObject("userpicture.Image")));
+            this.userpicture.InitialImage = null;
+            this.userpicture.Location = new System.Drawing.Point(1106, 34);
+            this.userpicture.Margin = new System.Windows.Forms.Padding(4);
+            this.userpicture.Name = "userpicture";
+            this.userpicture.Size = new System.Drawing.Size(75, 75);
+            this.userpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userpicture.TabIndex = 6;
+            this.userpicture.TabStop = false;
+            this.userpicture.Click += new System.EventHandler(this.userpicture_Click);
             // 
             // MainForm
             // 
@@ -404,9 +399,7 @@ namespace gachinaruto
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainForm";
             this.Text = "Главная страница";
-          
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -415,6 +408,7 @@ namespace gachinaruto
             ((System.ComponentModel.ISupportInitialize)(this.clanpagebutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.articleicon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newelementicon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -426,8 +420,6 @@ namespace gachinaruto
         private System.Windows.Forms.Button herosearch;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label naitipersonaja;
-        private System.Windows.Forms.Label privetusername;
-        private System.Windows.Forms.PictureBox userpicture;
         private System.Windows.Forms.CheckedListBox filterclan;
         private System.Windows.Forms.Label labelclan;
         private System.Windows.Forms.Label labelfrom;
@@ -446,6 +438,8 @@ namespace gachinaruto
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox newelementicon;
+        private System.Windows.Forms.Label privetusername;
+        private System.Windows.Forms.PictureBox userpicture;
     }
 }
 

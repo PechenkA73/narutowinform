@@ -31,8 +31,6 @@ namespace gachinaruto
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewElementForm));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.privetusername = new System.Windows.Forms.Label();
-            this.userpicture = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,7 +51,6 @@ namespace gachinaruto
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.articlepanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userpicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.characterpanel.SuspendLayout();
             this.articlepanel.SuspendLayout();
@@ -69,30 +66,6 @@ namespace gachinaruto
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            // 
-            // privetusername
-            // 
-            this.privetusername.AutoSize = true;
-            this.privetusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.privetusername.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.privetusername.Location = new System.Drawing.Point(1113, 109);
-            this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(99, 25);
-            this.privetusername.TabIndex = 13;
-            this.privetusername.Text = "username";
-            // 
-            // userpicture
-            // 
-            this.userpicture.Image = ((System.Drawing.Image)(resources.GetObject("userpicture.Image")));
-            this.userpicture.InitialImage = null;
-            this.userpicture.Location = new System.Drawing.Point(1132, 38);
-            this.userpicture.Margin = new System.Windows.Forms.Padding(4);
-            this.userpicture.Name = "userpicture";
-            this.userpicture.Size = new System.Drawing.Size(65, 67);
-            this.userpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userpicture.TabIndex = 12;
-            this.userpicture.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -336,15 +309,12 @@ namespace gachinaruto
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.privetusername);
-            this.Controls.Add(this.userpicture);
             this.Controls.Add(this.pictureBox2);
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "NewElementForm";
             this.Text = "New element page";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.characterpanel.ResumeLayout(false);
             this.characterpanel.PerformLayout();
@@ -359,8 +329,6 @@ namespace gachinaruto
 
 
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label privetusername;
-        private System.Windows.Forms.PictureBox userpicture;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;

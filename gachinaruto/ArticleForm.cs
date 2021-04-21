@@ -19,6 +19,9 @@ namespace gachinaruto
         string articleName;
         public ArticleForm(string _name)
         {
+            privetusername.Text = UserForm.Login;
+            userpicture.Load("../../Pictures/Users/" + UserForm.Login + ".jpg");
+
             articleName = _name;
             InitializeComponent();
             Text = articleName;

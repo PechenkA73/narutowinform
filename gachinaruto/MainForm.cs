@@ -300,6 +300,11 @@ namespace gachinaruto
         {
             UserForm uf = new UserForm();
             uf.ShowDialog();
+
+            newelementicon.Visible = (UserForm.Login == "абоба");
+
+            privetusername.Text = UserForm.Login;
+            userpicture.Load("../../Pictures/Users/" + UserForm.Login + ".jpg");
         }
 
         private void button1_Click(object sender, EventArgs e)
