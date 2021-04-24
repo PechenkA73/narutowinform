@@ -68,6 +68,17 @@ namespace gachinaruto
                     if(textBox1.Text == lines[i] && textBox2.Text == lines[i+1])
                     {
                         MessageBox.Show("Приветсвуем," + Login + "!");
+
+                        if(File.Exists(Login + ".txt"))
+                        {
+                            string[] lines2 = File.ReadAllLines(Login + ".txt");
+                            MainForm.favCharacters.Clear();
+                            foreach( Person p in MainForm.people_list)
+                            {
+                                if (lines2.Contains(p.name))
+                                    MainForm.favCharacters.Add(p);
+                            }
+                        }
                         Close();
                     }
                 }

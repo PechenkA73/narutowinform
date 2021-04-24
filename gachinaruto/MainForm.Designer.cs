@@ -354,14 +354,14 @@ namespace gachinaruto
             // 
             // privetusername
             // 
-            this.privetusername.AutoSize = true;
             this.privetusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.privetusername.Location = new System.Drawing.Point(1101, 112);
+            this.privetusername.Location = new System.Drawing.Point(1065, 112);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(104, 25);
+            this.privetusername.Size = new System.Drawing.Size(151, 25);
             this.privetusername.TabIndex = 5;
             this.privetusername.Text = " username";
+            this.privetusername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // userpicture
             // 
@@ -399,6 +399,7 @@ namespace gachinaruto
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainForm";
             this.Text = "Главная страница";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();

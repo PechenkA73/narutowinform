@@ -18,8 +18,13 @@ namespace gachinaruto
         string clanName;
         public ClanForm(string _name)
         {
-            privetusername.Text = UserForm.Login;
-            userpicture.Load("../../Pictures/Users/" + UserForm.Login + ".jpg");
+            try
+            {
+                privetusername.Text = UserForm.Login;
+                userpicture.Load("../../Pictures/Users/" + UserForm.Login + ".jpg");
+            }
+
+            catch (Exception) { }
 
             clanName = _name;
             InitializeComponent();

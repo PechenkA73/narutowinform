@@ -301,10 +301,17 @@ namespace gachinaruto
             UserForm uf = new UserForm();
             uf.ShowDialog();
 
-            newelementicon.Visible = (UserForm.Login == "абоба");
 
-            privetusername.Text = UserForm.Login;
-            userpicture.Load("../../Pictures/Users/" + UserForm.Login + ".jpg");
+            try
+            {
+                newelementicon.Visible = (UserForm.Login == "абоба");
+
+                privetusername.Text = UserForm.Login;
+                
+                userpicture.Load("../../Pictures/Users/" + UserForm.Login + ".jpg");
+            }
+
+            catch(Exception) { }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -421,6 +428,23 @@ namespace gachinaruto
         {
             NewElementForm nel = new NewElementForm();
             nel.ShowDialog();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (UserForm.Login == "")
+                return;
+
+
+            File.WriteAllText(UserForm.Login + ".txt", "");
+
+            foreach(Person p in MainForm.favCharacters)
+            {
+                File.AppendAllText(UserForm.Login + ".txt", Environment.NewLine + p.name);
+
+            }
+
+            
         }
     }
 }

@@ -21,8 +21,13 @@ namespace gachinaruto
         {
             InitializeComponent();
 
-            privetusername.Text = UserForm.Login;
-            userpicture.Load("../../Pictures/Users/" + UserForm.Login + ".jpg");
+            try
+            {
+                privetusername.Text = UserForm.Login;
+                userpicture.Load("../../Pictures/Users/" + UserForm.Login + ".jpg");
+            }
+
+            catch (Exception) { }
 
             Text = name;
             try
