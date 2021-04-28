@@ -29,6 +29,7 @@ namespace gachinaruto
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewElementForm));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,6 +51,10 @@ namespace gachinaruto
             this.label4 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.articlepanel = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.characterpanel.SuspendLayout();
@@ -133,7 +138,7 @@ namespace gachinaruto
             // 
             this.labelfrom.AutoSize = true;
             this.labelfrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelfrom.Location = new System.Drawing.Point(29, 119);
+            this.labelfrom.Location = new System.Drawing.Point(29, 143);
             this.labelfrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelfrom.Name = "labelfrom";
             this.labelfrom.Size = new System.Drawing.Size(160, 20);
@@ -144,7 +149,7 @@ namespace gachinaruto
             // 
             this.labelprofession.AutoSize = true;
             this.labelprofession.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelprofession.Location = new System.Drawing.Point(29, 231);
+            this.labelprofession.Location = new System.Drawing.Point(29, 286);
             this.labelprofession.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelprofession.Name = "labelprofession";
             this.labelprofession.Size = new System.Drawing.Size(111, 20);
@@ -183,15 +188,18 @@ namespace gachinaruto
             // 
             // characterpanel
             // 
+            this.characterpanel.Controls.Add(this.textBox6);
+            this.characterpanel.Controls.Add(this.textBox5);
+            this.characterpanel.Controls.Add(this.textBox4);
             this.characterpanel.Controls.Add(this.filterprofession);
             this.characterpanel.Controls.Add(this.filterfrom);
             this.characterpanel.Controls.Add(this.filterclan);
             this.characterpanel.Controls.Add(this.labelclan);
             this.characterpanel.Controls.Add(this.labelfrom);
             this.characterpanel.Controls.Add(this.labelprofession);
-            this.characterpanel.Location = new System.Drawing.Point(629, 117);
+            this.characterpanel.Location = new System.Drawing.Point(619, 117);
             this.characterpanel.Name = "characterpanel";
-            this.characterpanel.Size = new System.Drawing.Size(511, 358);
+            this.characterpanel.Size = new System.Drawing.Size(511, 461);
             this.characterpanel.TabIndex = 28;
             this.characterpanel.Visible = false;
             // 
@@ -208,7 +216,7 @@ namespace gachinaruto
             "Мизукаге",
             "Райкаге",
             "Цучикаге"});
-            this.filterprofession.Location = new System.Drawing.Point(33, 254);
+            this.filterprofession.Location = new System.Drawing.Point(33, 337);
             this.filterprofession.Name = "filterprofession";
             this.filterprofession.Size = new System.Drawing.Size(221, 89);
             this.filterprofession.TabIndex = 27;
@@ -232,7 +240,7 @@ namespace gachinaruto
             "Лес Шиккоцу",
             "Гора Мьёбоку",
             "Пещера Рьючи"});
-            this.filterfrom.Location = new System.Drawing.Point(33, 142);
+            this.filterfrom.Location = new System.Drawing.Point(33, 194);
             this.filterfrom.Name = "filterfrom";
             this.filterfrom.Size = new System.Drawing.Size(221, 89);
             this.filterfrom.TabIndex = 26;
@@ -256,7 +264,7 @@ namespace gachinaruto
             "Яманака",
             "Абураме",
             "Акимичи"});
-            this.filterclan.Location = new System.Drawing.Point(33, 27);
+            this.filterclan.Location = new System.Drawing.Point(33, 54);
             this.filterclan.Name = "filterclan";
             this.filterclan.Size = new System.Drawing.Size(221, 89);
             this.filterclan.TabIndex = 25;
@@ -293,6 +301,33 @@ namespace gachinaruto
             this.articlepanel.Name = "articlepanel";
             this.articlepanel.Size = new System.Drawing.Size(608, 239);
             this.articlepanel.TabIndex = 31;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(33, 309);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(221, 22);
+            this.textBox4.TabIndex = 28;
+            this.toolTip1.SetToolTip(this.textBox4, "Чтобы добавить новую профессию персонажу введите название и нажмите Enter");
+            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(33, 166);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(221, 22);
+            this.textBox5.TabIndex = 29;
+            this.toolTip1.SetToolTip(this.textBox5, "Чтобы добавить новую принадлежность персонажу введите название и нажмите Enter");
+            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(33, 28);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(221, 22);
+            this.textBox6.TabIndex = 30;
+            this.toolTip1.SetToolTip(this.textBox6, "Чтобы добавить новый клан персонажу введите название и нажмите Enter");
+            this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
             // 
             // NewElementForm
             // 
@@ -348,5 +383,9 @@ namespace gachinaruto
         private System.Windows.Forms.CheckedListBox filterclan;
         private System.Windows.Forms.CheckedListBox filterfrom;
         private System.Windows.Forms.CheckedListBox filterprofession;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }

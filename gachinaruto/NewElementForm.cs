@@ -157,5 +157,59 @@ namespace gachinaruto
                 pictureBox1.Load(address);
             }
         }
+
+        private void textBox6_KeyDown(object sender, KeyEventArgs e)
+        {
+            textBox6.Text = textBox6.Text.Replace(Environment.NewLine, "");
+            if (e.KeyCode == Keys.Enter)
+            {
+                bool contains = false;
+                foreach (string item in filterclan.Items)
+                    if (item == textBox6.Text)
+                        contains = true;
+
+                if (!contains)
+                {
+                    filterclan.Items.Add(textBox6.Text);
+                    textBox6.Text = "";
+                }
+            }
+        }
+
+        private void textBox5_KeyDown(object sender, KeyEventArgs e)
+        {
+            textBox5.Text = textBox5.Text.Replace(Environment.NewLine, "");
+            if (e.KeyCode == Keys.Enter)
+            {
+                bool contains = false;
+                foreach (string item in filterfrom.Items)
+                    if (item == textBox5.Text)
+                        contains = true;
+
+                if (!contains)
+                {
+                    filterfrom.Items.Add(textBox5.Text);
+                    textBox5.Text = "";
+                }
+            }
+        }
+
+        private void textBox4_KeyDown(object sender, KeyEventArgs e)
+        {
+            textBox4.Text = textBox4.Text.Replace(Environment.NewLine, "");
+            if (e.KeyCode == Keys.Enter)
+            {
+                bool contains = false;
+                foreach (string item in filterprofession.Items)
+                    if (item == textBox4.Text)
+                        contains = true;
+
+                if (!contains)
+                {
+                    filterprofession.Items.Add(textBox4.Text);
+                    textBox4.Text = "";
+                }
+            }
+        }
     }
 }

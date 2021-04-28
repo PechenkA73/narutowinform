@@ -100,6 +100,7 @@ namespace gachinaruto
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(346, 31);
             this.textBox1.TabIndex = 3;
+           
             // 
             // naitipersonaja
             // 
@@ -231,6 +232,7 @@ namespace gachinaruto
             this.panel1.Size = new System.Drawing.Size(1004, 519);
             this.panel1.TabIndex = 13;
             this.panel1.Click += new System.EventHandler(this.button1_Click);
+            
             // 
             // button1
             // 

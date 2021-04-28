@@ -100,5 +100,11 @@ namespace gachinaruto
                 pictureBox1.Load(address);
             }
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            MailSending ms = new MailSending();
+            ms.ShowDialog();
+        }
     }
 }
