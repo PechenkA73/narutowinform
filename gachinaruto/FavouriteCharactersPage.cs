@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
+using System.IO;
 
 namespace gachinaruto
 {
@@ -54,11 +57,49 @@ namespace gachinaruto
             {
                 Text = Words["Страница с любимыми персонажами"];
                 label1.Text = Words["Любимые персонажи"] + ":";
+                label2.Text = Words["Ваша почта:"];
             }
             catch (Exception e)
             {
                 string s = e.Message;
             }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            MailAddress fromMailAddress = new MailAddress("datwasjoke@gmail.com", textBox1.Text);
+            MailAddress toAddress = new MailAddress(textBox1.Text);
+            MailMessage m = new MailMessage(fromMailAddress, toAddress);
+
+            m.Subject = "Ваши любимые персонажи";
+            m.Body = "Привет!" +
+                Environment.NewLine + "Вот ваши любимые персонажи" +
+                Environment.NewLine;
+
+            File.WriteAllText("Ваши любимые персонажи.csv", 
+                "Имя,Клан,Принадлежность,Профессия");
+            foreach (Person person in MainForm.favCharacters)
+            {
+                m.Body = m.Body +
+                    Environment.NewLine +
+                    person.name + "( Клан " + person.clan + " )";
+
+                File.AppendAllText("Ваши любимые персонажи.csv",
+                    Environment.NewLine +
+                    person.name + "," +
+                    "\"" + person.clan + "\"," +
+                    "\"" + person.from + "\"," +
+                    "\"" + person.profession + "\"");
+            }
+
+            m.Attachments.Add(new Attachment("Ваши любимые персонажи.csv"));
+
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.Credentials = new NetworkCredential("datwasjoke@gmail.com", "321654987datwasjoke");
+            smtp.EnableSsl = true;
+            smtp.Send(m);
+            MessageBox.Show("Письмо отправлено");
+            textBox1.Text = "";
         }
     }
 }

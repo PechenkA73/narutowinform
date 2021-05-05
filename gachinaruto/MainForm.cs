@@ -173,6 +173,42 @@ namespace gachinaruto
 
             EngWords.Add("Обзор", "Review");
             EngWords.Add("Известные персонажи", "Famous characters");
+
+            /// <summary>
+            /// Перевод страницы c отправкой письма
+            /// </summary>
+            RusWords.Add("Страница отправки сообщений", "Страница отправки сообщений");
+            RusWords.Add("Имя:", "Имя:");
+            RusWords.Add("Ваша почта:", "Ваша почта:");
+            RusWords.Add("Текст письма:", "Текст письма:");
+            RusWords.Add("Отправить письмо", "Отправить письмо");
+
+            EngWords.Add("Страница отправки сообщений", "Mail sending form");
+            EngWords.Add("Имя:", "Name:");
+            EngWords.Add("Ваша почта:", "Your email:");
+            EngWords.Add("Текст письма:", "Text of email:");
+            EngWords.Add("Отправить письмо", "Send email");
+
+            /// <summary>
+            /// Перевод страницы с логином
+            /// </summary>
+            RusWords.Add("Страница входа в профиль", "Страница входа в профиль");
+            RusWords.Add("Логин:", "Логин:");
+            RusWords.Add("Пароль:", "Пароль:");
+            RusWords.Add("Показать пароль", "Показать пароль");
+            RusWords.Add("Войти", "Войти");
+            RusWords.Add("Зарегестрироваться", "Зарегестрироваться");
+            RusWords.Add("Вернуться назад", "Вернуться назад");
+            RusWords.Add("Добавить картинку профиля", "Добавить картинку профиля");
+
+            EngWords.Add("Страница входа в профиль", "Login form");
+            EngWords.Add("Логин:", "Login:");
+            EngWords.Add("Пароль:", "Password:");
+            EngWords.Add("Показать пароль", "Show password");
+            EngWords.Add("Войти", "Login");
+            EngWords.Add("Зарегестрироваться", "Sign up");
+            EngWords.Add("Вернуться назад", "Back");
+            EngWords.Add("Добавить картинку профиля", "Add profile picture");
         }
 
         /// <summary>

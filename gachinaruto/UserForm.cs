@@ -45,7 +45,7 @@ namespace gachinaruto
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            textBox2.UseSystemPasswordChar = false;
+            textBox2.UseSystemPasswordChar = !textBox2.UseSystemPasswordChar;
         }
 
         private void button2_Click(object sender, EventArgs e)

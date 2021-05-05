@@ -18,6 +18,8 @@ namespace gachinaruto
         string clanName;
         public ClanForm(string _name)
         {
+            InitializeComponent();
+
             try
             {
                 privetusername.Text = UserForm.Login;
@@ -27,7 +29,7 @@ namespace gachinaruto
             catch (Exception) { }
 
             clanName = _name;
-            InitializeComponent();
+            
             Text = "Клан " + clanName;
 
 

@@ -155,6 +155,7 @@ namespace gachinaruto
             {
                 address = openFileDialog1.FileName;
                 pictureBox1.Load(address);
+                label5.Visible = false;
             }
         }
 
@@ -210,6 +211,11 @@ namespace gachinaruto
                     textBox4.Text = "";
                 }
             }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

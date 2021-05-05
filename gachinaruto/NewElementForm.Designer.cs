@@ -44,6 +44,9 @@ namespace gachinaruto
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.characterpanel = new System.Windows.Forms.Panel();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.filterprofession = new System.Windows.Forms.CheckedListBox();
             this.filterfrom = new System.Windows.Forms.CheckedListBox();
             this.filterclan = new System.Windows.Forms.CheckedListBox();
@@ -51,10 +54,8 @@ namespace gachinaruto
             this.label4 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.articlepanel = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.characterpanel.SuspendLayout();
@@ -203,6 +204,33 @@ namespace gachinaruto
             this.characterpanel.TabIndex = 28;
             this.characterpanel.Visible = false;
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(33, 28);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(221, 22);
+            this.textBox6.TabIndex = 30;
+            this.toolTip1.SetToolTip(this.textBox6, "Чтобы добавить новый клан персонажу введите название и нажмите Enter");
+            this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(33, 166);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(221, 22);
+            this.textBox5.TabIndex = 29;
+            this.toolTip1.SetToolTip(this.textBox5, "Чтобы добавить новую принадлежность персонажу введите название и нажмите Enter");
+            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(33, 309);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(221, 22);
+            this.textBox4.TabIndex = 28;
+            this.toolTip1.SetToolTip(this.textBox4, "Чтобы добавить новую профессию персонажу введите название и нажмите Enter");
+            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
+            // 
             // filterprofession
             // 
             this.filterprofession.FormattingEnabled = true;
@@ -302,38 +330,23 @@ namespace gachinaruto
             this.articlepanel.Size = new System.Drawing.Size(608, 239);
             this.articlepanel.TabIndex = 31;
             // 
-            // textBox4
+            // label5
             // 
-            this.textBox4.Location = new System.Drawing.Point(33, 309);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(221, 22);
-            this.textBox4.TabIndex = 28;
-            this.toolTip1.SetToolTip(this.textBox4, "Чтобы добавить новую профессию персонажу введите название и нажмите Enter");
-            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(33, 166);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(221, 22);
-            this.textBox5.TabIndex = 29;
-            this.toolTip1.SetToolTip(this.textBox5, "Чтобы добавить новую принадлежность персонажу введите название и нажмите Enter");
-            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(33, 28);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(221, 22);
-            this.textBox6.TabIndex = 30;
-            this.toolTip1.SetToolTip(this.textBox6, "Чтобы добавить новый клан персонажу введите название и нажмите Enter");
-            this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label5.Location = new System.Drawing.Point(15, 260);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(296, 25);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Добавьте сюда свою картинку";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // NewElementForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.articlepanel);
             this.Controls.Add(this.characterpanel);
             this.Controls.Add(this.button1);
@@ -387,5 +400,6 @@ namespace gachinaruto
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label5;
     }
 }

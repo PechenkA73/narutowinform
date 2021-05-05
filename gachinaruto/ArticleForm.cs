@@ -19,6 +19,8 @@ namespace gachinaruto
         string articleName;
         public ArticleForm(string _name)
         {
+            InitializeComponent();
+
             try
             {
                 privetusername.Text = UserForm.Login;
@@ -28,7 +30,6 @@ namespace gachinaruto
             catch (Exception) { }
 
             articleName = _name;
-            InitializeComponent();
             Text = articleName;
             try
             {
