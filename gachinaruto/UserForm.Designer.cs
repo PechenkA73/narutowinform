@@ -137,6 +137,7 @@ namespace gachinaruto
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "Обратная связь");
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // linkLabel1

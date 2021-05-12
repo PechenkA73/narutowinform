@@ -13,12 +13,22 @@ namespace gachinaruto
 {
     public partial class UserForm : Form
     {
+        /// <summary>
+        /// Зарегистрироваться / войти
+        /// </summary>
+        bool isRegister = false;
         public static string Login = "";
         public static string Image = "";
 
         public UserForm()
         {
             InitializeComponent();
+
+            if (MainForm.Language == "Russian")
+                RenameAll(MainForm.RusWords);
+            else if (MainForm.Language == "English")
+                RenameAll(MainForm.EngWords);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,6 +41,7 @@ namespace gachinaruto
                 panel2.Visible = true;
                 button2.Text = "Подтвердить";
                 button1.Text = "Вернуться назад";
+                isRegister = false;
             }
             else
             {
@@ -40,6 +51,7 @@ namespace gachinaruto
                 panel2.Visible = false;
                 button1.Text = "Зарегестрироваться";
                 button2.Text = "Войти";
+                isRegister = true;
             }
         }
 
@@ -52,42 +64,54 @@ namespace gachinaruto
         {
             if (button2.Text == "Подтвердить")
             {
-                File.AppendAllText("../../Files/Data Files.txt", 
-                    Environment.NewLine + textBox1.Text + 
+                File.AppendAllText("../../Files/Data Files.txt",
+                    Environment.NewLine + textBox1.Text +
                     Environment.NewLine + textBox2.Text);
                 button1_Click(sender, e);
                 textBox1.Text = "";
                 textBox2.Text = "";
             }
-            else if(button2.Text == "Войти")
+            else if (button2.Text == "Войти")
             {
                 string[] lines = File.ReadAllLines("../../Files/Data Files.txt");
-                for(int i = 0; i < lines.Length; i += 2)
+                for (int i = 0; i < lines.Length; i += 2)
                 {
-                    Login = textBox1.Text;
-                    if(textBox1.Text == lines[i] && textBox2.Text == lines[i+1])
+                    if (textBox1.Text == lines[i] && textBox2.Text == lines[i + 1])
                     {
-                        MessageBox.Show("Приветсвуем," + Login + "!");
+                        Login = textBox1.Text;
+                        if (MainForm.Language == "Russian")
+                            MessageBox.Show("Приветсвуем," + Login + "!");
+                        else
+                            MessageBox.Show("Hello," + Login + "!");
 
-                        if(File.Exists(Login + ".txt"))
+
+                        if (File.Exists(Login + ".txt"))
                         {
                             string[] lines2 = File.ReadAllLines(Login + ".txt");
                             MainForm.favCharacters.Clear();
-                            foreach( Person p in MainForm.people_list)
+                            foreach (Person p in MainForm.people_list)
                             {
                                 if (lines2.Contains(p.name))
                                     MainForm.favCharacters.Add(p);
                             }
                         }
                         Close();
+                        return;
                     }
                 }
 
+                if (MainForm.Language == "Russian")
+                    MessageBox.Show("Неправильный логин или пароль, попробуйте ещё раз!");
+                else
+                    MessageBox.Show("Wrong user login or password, try again!");
+
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
 
             if (address != "")
             {
-                File.Copy(address, "../../Pictures/Users/" + textBox1.Text + ".jpg");
+                File.Copy(address, "../../Pictures/Users/" + UserForm.Login + ".jpg");
             }
         }
 
@@ -106,5 +130,38 @@ namespace gachinaruto
             MailSending ms = new MailSending();
             ms.ShowDialog();
         }
+
+        void RenameAll(Dictionary<string, string> Words)
+        {
+            try
+            {
+                Text = Words["Страница логина"];
+                label1.Text = Words["Логин:"];
+                label2.Text = Words["Пароль:"];
+                label3.Text = Words["Добавьте картинку профиля"];
+                toolTip1.RemoveAll();
+                toolTip1.SetToolTip(pictureBox3, Words["Обратная связь"]);
+                linkLabel1.Text = Words["Показать пароль"];
+                if (isRegister)
+                {
+                    button1.Text = Words["Зарегестрироваться"];
+                    button2.Text = Words["Войти"];
+                }
+                else
+                {
+                    button1.Text = Words["Вернуться назад"];
+                    button2.Text = Words["Подтвердить"];
+                }
+                
+            }
+            catch (Exception e)
+            {
+                string s = e.Message;
+            } 
+            
+        }
+
+            
+      
     }
 }

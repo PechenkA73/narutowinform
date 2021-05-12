@@ -111,6 +111,7 @@ namespace gachinaruto
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, "Отправить любимых персонажей");
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // toolTip2

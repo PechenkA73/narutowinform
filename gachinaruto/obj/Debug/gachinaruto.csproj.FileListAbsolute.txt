@@ -108,3 +108,23 @@ D:\НГ_pk20\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowi
 D:\НГ_pk20\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.UserForm.resources
 D:\НГ_pk20\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.FavCharacterUC.resources
 D:\НГ_pk20\da(ТОТ КТО УДАЛИТ БУДЕТ МАМБЕТОМ)\narutowinform\gachinaruto\obj\Debug\gachinaruto.MailSending.resources
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\bin\Debug\gachinaruto.exe.config
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\bin\Debug\gachinaruto.exe
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\bin\Debug\gachinaruto.pdb
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.csprojAssemblyReference.cache
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.ArticleForm.resources
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.ArticlesPage.resources
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.ClanForm.resources
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.ClansPage.resources
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.FavCharacterUC.resources
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.FavouriteCharactersPage.resources
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.MailSending.resources
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.MainForm.resources
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.CharacterForm.resources
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.NewElementForm.resources
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.Properties.Resources.resources
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.UserForm.resources
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.csproj.GenerateResource.cache
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.csproj.CoreCompileInputs.cache
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.exe
+C:\Users\beavi\Downloads\git\2 год\narutowinform\gachinaruto\obj\Debug\gachinaruto.pdb

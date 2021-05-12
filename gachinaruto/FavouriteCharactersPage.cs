@@ -67,7 +67,7 @@ namespace gachinaruto
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            MailAddress fromMailAddress = new MailAddress("datwasjoke@gmail.com", textBox1.Text);
+            MailAddress fromMailAddress = new MailAddress("datwasjoke@gmail.com", "Программа по аниме Наруто");
             MailAddress toAddress = new MailAddress(textBox1.Text);
             MailMessage m = new MailMessage(fromMailAddress, toAddress);
 
@@ -90,6 +90,19 @@ namespace gachinaruto
                     "\"" + person.clan + "\"," +
                     "\"" + person.from + "\"," +
                     "\"" + person.profession + "\"");
+
+                try
+                {
+                    Attachment attachment = new Attachment("../../Pictures/Персонажи/" + person.name + ".jpg");
+                    attachment.Name = person.name + ".jpg";
+                    m.Attachments.Add(attachment);
+                }
+                catch (Exception)
+                {
+                    Attachment attachment = new Attachment("../../Pictures/Персонажи/" + person.name + ".png");
+                    attachment.Name = person.name + ".jpg";
+                    m.Attachments.Add(attachment);
+                }
             }
 
             m.Attachments.Add(new Attachment("Ваши любимые персонажи.csv"));

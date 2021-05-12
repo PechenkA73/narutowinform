@@ -192,7 +192,7 @@ namespace gachinaruto
             /// <summary>
             /// Перевод страницы с логином
             /// </summary>
-            RusWords.Add("Страница входа в профиль", "Страница входа в профиль");
+            RusWords.Add("Страница логина", "Страница логина");
             RusWords.Add("Логин:", "Логин:");
             RusWords.Add("Пароль:", "Пароль:");
             RusWords.Add("Показать пароль", "Показать пароль");
@@ -200,8 +200,9 @@ namespace gachinaruto
             RusWords.Add("Зарегестрироваться", "Зарегестрироваться");
             RusWords.Add("Вернуться назад", "Вернуться назад");
             RusWords.Add("Добавить картинку профиля", "Добавить картинку профиля");
+            RusWords.Add("Обратная связь", "Обратная связь");
 
-            EngWords.Add("Страница входа в профиль", "Login form");
+            EngWords.Add("Страница логина", "Login form");
             EngWords.Add("Логин:", "Login:");
             EngWords.Add("Пароль:", "Password:");
             EngWords.Add("Показать пароль", "Show password");
@@ -209,6 +210,7 @@ namespace gachinaruto
             EngWords.Add("Зарегестрироваться", "Sign up");
             EngWords.Add("Вернуться назад", "Back");
             EngWords.Add("Добавить картинку профиля", "Add profile picture");
+            EngWords.Add("Обратная связь", "Feedback");
         }
 
         /// <summary>
