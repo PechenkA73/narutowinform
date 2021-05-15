@@ -77,7 +77,7 @@ namespace gachinaruto
             this.privetusername.Location = new System.Drawing.Point(1131, 111);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(99, 25);
+            this.privetusername.Size = new System.Drawing.Size(80, 20);
             this.privetusername.TabIndex = 8;
             this.privetusername.Text = "username";
             // 
@@ -161,7 +161,7 @@ namespace gachinaruto
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(543, 273);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 20);
+            this.label6.Size = new System.Drawing.Size(78, 17);
             this.label6.TabIndex = 16;
             this.label6.Text = "Описание:";
             // 
@@ -170,7 +170,7 @@ namespace gachinaruto
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -183,6 +183,7 @@ namespace gachinaruto
             this.Controls.Add(this.userpicture);
             this.Controls.Add(this.pictureBox2);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "CharacterForm";

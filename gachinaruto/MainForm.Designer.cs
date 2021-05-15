@@ -108,7 +108,7 @@ namespace gachinaruto
             this.naitipersonaja.Location = new System.Drawing.Point(293, 40);
             this.naitipersonaja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.naitipersonaja.Name = "naitipersonaja";
-            this.naitipersonaja.Size = new System.Drawing.Size(182, 25);
+            this.naitipersonaja.Size = new System.Drawing.Size(147, 20);
             this.naitipersonaja.TabIndex = 4;
             this.naitipersonaja.Text = "Найти персонажа:";
             // 
@@ -123,7 +123,6 @@ namespace gachinaruto
             "Сенджу",
             "Хьюга",
             "Хатаке",
-            "Ибури",
             "Инузука",
             "Казекаге",
             "Ооцуцуки",
@@ -132,11 +131,12 @@ namespace gachinaruto
             "Хозуки",
             "Яманака",
             "Абураме",
-            "Акимичи"});
-            this.filterclan.Location = new System.Drawing.Point(0, 24);
+            "Акимичи",
+            "Камизуру"});
+            this.filterclan.Location = new System.Drawing.Point(0, 21);
             this.filterclan.Margin = new System.Windows.Forms.Padding(4);
             this.filterclan.Name = "filterclan";
-            this.filterclan.Size = new System.Drawing.Size(229, 109);
+            this.filterclan.Size = new System.Drawing.Size(229, 106);
             this.filterclan.TabIndex = 7;
             // 
             // labelclan
@@ -146,7 +146,7 @@ namespace gachinaruto
             this.labelclan.Location = new System.Drawing.Point(4, 0);
             this.labelclan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelclan.Name = "labelclan";
-            this.labelclan.Size = new System.Drawing.Size(55, 20);
+            this.labelclan.Size = new System.Drawing.Size(45, 17);
             this.labelclan.TabIndex = 8;
             this.labelclan.Text = "Клан:";
             // 
@@ -157,7 +157,7 @@ namespace gachinaruto
             this.labelfrom.Location = new System.Drawing.Point(4, 158);
             this.labelfrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelfrom.Name = "labelfrom";
-            this.labelfrom.Size = new System.Drawing.Size(160, 20);
+            this.labelfrom.Size = new System.Drawing.Size(124, 17);
             this.labelfrom.TabIndex = 9;
             this.labelfrom.Text = "Принадлежность:";
             // 
@@ -181,11 +181,13 @@ namespace gachinaruto
             "Союзные Силы Шиноби",
             "Лес Шиккоцу",
             "Гора Мьёбоку",
-            "Пещера Рьючи"});
+            "Пещера Рьючи",
+            "Корень",
+            "Джинчуурики"});
             this.filterfrom.Location = new System.Drawing.Point(0, 185);
             this.filterfrom.Margin = new System.Windows.Forms.Padding(4);
             this.filterfrom.Name = "filterfrom";
-            this.filterfrom.Size = new System.Drawing.Size(229, 109);
+            this.filterfrom.Size = new System.Drawing.Size(229, 106);
             this.filterfrom.TabIndex = 10;
             // 
             // labelprofession
@@ -195,7 +197,7 @@ namespace gachinaruto
             this.labelprofession.Location = new System.Drawing.Point(4, 319);
             this.labelprofession.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelprofession.Name = "labelprofession";
-            this.labelprofession.Size = new System.Drawing.Size(111, 20);
+            this.labelprofession.Size = new System.Drawing.Size(87, 17);
             this.labelprofession.TabIndex = 11;
             this.labelprofession.Text = "Профессия:";
             // 
@@ -217,7 +219,7 @@ namespace gachinaruto
             this.filterprofession.Location = new System.Drawing.Point(4, 343);
             this.filterprofession.Margin = new System.Windows.Forms.Padding(4);
             this.filterprofession.Name = "filterprofession";
-            this.filterprofession.Size = new System.Drawing.Size(229, 109);
+            this.filterprofession.Size = new System.Drawing.Size(229, 106);
             this.filterprofession.TabIndex = 12;
             // 
             // panel1
@@ -380,7 +382,7 @@ namespace gachinaruto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.newelementicon);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -394,6 +396,7 @@ namespace gachinaruto
             this.Controls.Add(this.privetusername);
             this.Controls.Add(this.naitipersonaja);
             this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);

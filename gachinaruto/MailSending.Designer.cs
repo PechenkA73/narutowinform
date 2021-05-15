@@ -29,6 +29,7 @@ namespace gachinaruto
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MailSending));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,7 +53,7 @@ namespace gachinaruto
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox1.Location = new System.Drawing.Point(18, 43);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 30);
+            this.textBox1.Size = new System.Drawing.Size(196, 26);
             this.textBox1.TabIndex = 1;
             // 
             // label2
@@ -90,7 +91,7 @@ namespace gachinaruto
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label3.Location = new System.Drawing.Point(227, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 31);
+            this.label3.Size = new System.Drawing.Size(139, 26);
             this.label3.TabIndex = 5;
             this.label3.Text = "Ваша почта:";
             // 
@@ -99,7 +100,7 @@ namespace gachinaruto
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox3.Location = new System.Drawing.Point(233, 43);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 30);
+            this.textBox3.Size = new System.Drawing.Size(196, 26);
             this.textBox3.TabIndex = 6;
             // 
             // MailSending
@@ -114,6 +115,7 @@ namespace gachinaruto
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MailSending";
             this.Text = "Страница отправки сообщений";
             this.ResumeLayout(false);

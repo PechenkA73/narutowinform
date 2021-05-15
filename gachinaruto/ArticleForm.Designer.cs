@@ -64,7 +64,7 @@ namespace gachinaruto
             this.privetusername.Location = new System.Drawing.Point(1161, 91);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(104, 25);
+            this.privetusername.Size = new System.Drawing.Size(84, 20);
             this.privetusername.TabIndex = 22;
             this.privetusername.Text = " username";
             // 
@@ -113,7 +113,7 @@ namespace gachinaruto
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label3.Location = new System.Drawing.Point(12, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 36);
+            this.label3.Size = new System.Drawing.Size(87, 29);
             this.label3.TabIndex = 28;
             this.label3.Text = "Обзор";
             // 
@@ -155,7 +155,7 @@ namespace gachinaruto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
@@ -166,6 +166,7 @@ namespace gachinaruto
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.userpicture);
             this.Controls.Add(this.privetusername);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "ArticleForm";

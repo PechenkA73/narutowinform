@@ -78,7 +78,7 @@ namespace gachinaruto
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.textBox1.Location = new System.Drawing.Point(0, 192);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 38);
+            this.textBox1.Size = new System.Drawing.Size(230, 32);
             this.textBox1.TabIndex = 4;
             // 
             // label2
@@ -87,7 +87,7 @@ namespace gachinaruto
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label2.Location = new System.Drawing.Point(-6, 233);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 31);
+            this.label2.Size = new System.Drawing.Size(95, 26);
             this.label2.TabIndex = 5;
             this.label2.Text = "Пароль:";
             // 
@@ -96,7 +96,7 @@ namespace gachinaruto
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.textBox2.Location = new System.Drawing.Point(0, 267);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 38);
+            this.textBox2.Size = new System.Drawing.Size(230, 32);
             this.textBox2.TabIndex = 6;
             this.textBox2.UseSystemPasswordChar = true;
             // 
@@ -148,7 +148,7 @@ namespace gachinaruto
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
             this.linkLabel1.Location = new System.Drawing.Point(236, 276);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(170, 25);
+            this.linkLabel1.Size = new System.Drawing.Size(141, 20);
             this.linkLabel1.TabIndex = 12;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Показать пароль";
@@ -195,7 +195,7 @@ namespace gachinaruto
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label3.Location = new System.Drawing.Point(8, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(307, 26);
+            this.label3.Size = new System.Drawing.Size(250, 22);
             this.label3.TabIndex = 10;
             this.label3.Text = "Добавьте картинку профиля";
             // 
@@ -203,17 +203,14 @@ namespace gachinaruto
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // toolTip1
-            // 
-            this.toolTip1.ToolTipTitle = "Сообщить об ошибке";
-            // 
             // UserForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(782, 453);
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1000, 650);
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "UserForm";

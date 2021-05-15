@@ -95,6 +95,7 @@ namespace gachinaruto
             }
             else if(comboBox1.Text == "Статьи")
             {
+
                 foreach(Article article in MainForm.articles_list)
                 {
                     if (article.name == textBox1.Text.Trim())
@@ -138,6 +139,7 @@ namespace gachinaruto
             {
                 characterpanel.Visible = true;
             }
+
 
             if (comboBox1.Text != "Статьи")
             {

@@ -59,7 +59,7 @@ namespace gachinaruto
                     Panel panel = new Panel();
                     panel.BorderStyle = BorderStyle.FixedSingle;
                     panel.Location = new Point(x, y);
-                    panel.Size = new Size(panel1.Width / 2 - 30, 150); 
+                    panel.Size = new Size(panel1.Width / 2 - 30, 150);
                     panel.Name = pers.name;
                     panel1.Controls.Add(panel);
 
@@ -70,8 +70,54 @@ namespace gachinaruto
                         x = 10;
                         y = y + 160;
                     }
-                    
-                    
+
+
+
+                    PictureBox picture = new PictureBox();
+                    picture.Location = new Point(3, 0);
+                    picture.SizeMode = PictureBoxSizeMode.Zoom;
+                    picture.Tag = pers.name;
+                    try
+                    {
+                        picture.Load("../../Pictures/Персонажи/" + pers.name + ".jpg");
+                    }
+                    catch (Exception)
+                    {
+                        try
+                        {
+                            picture.Load("../../Pictures/Персонажи/" + pers.name + ".png");
+                        }
+                        catch (Exception) { }
+                    }
+                    picture.Dock = DockStyle.Fill;
+                    picture.Click += new EventHandler(MainForm.heroClick);
+                    panel.Controls.Add(picture);
+
+                    Label label = new Label();
+                    label.Dock = DockStyle.Bottom;
+                    label.Margin = new Padding(4, 0, 4, 0);
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    label.Text = pers.name;
+                    panel.Controls.Add(label);
+                }
+                else if (pers.profession.Contains(articleName))
+                {
+                    Panel panel = new Panel();
+                    panel.BorderStyle = BorderStyle.FixedSingle;
+                    panel.Location = new Point(x, y);
+                    panel.Size = new Size(panel1.Width / 2 - 30, 150);
+                    panel.Name = pers.name;
+                    panel1.Controls.Add(panel);
+
+
+                    x = x + panel1.Width / 2;
+                    if (x + panel1.Width / 2 - 30 > panel1.Width)
+                    {
+                        x = 10;
+                        y = y + 160;
+                    }
+
+
 
                     PictureBox picture = new PictureBox();
                     picture.Location = new Point(3, 0);

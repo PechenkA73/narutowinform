@@ -149,6 +149,7 @@ namespace gachinaruto
             this.Controls.Add(this.privetusername);
             this.Controls.Add(this.userpicture);
             this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "ClansPage";

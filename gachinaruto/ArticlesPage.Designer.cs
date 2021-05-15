@@ -89,7 +89,7 @@ namespace gachinaruto
             this.label1.Location = new System.Drawing.Point(289, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 25);
+            this.label1.Size = new System.Drawing.Size(121, 20);
             this.label1.TabIndex = 18;
             this.label1.Text = "Найти cтатью:";
             // 
@@ -123,7 +123,7 @@ namespace gachinaruto
             this.privetusername.Location = new System.Drawing.Point(1092, 91);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(104, 25);
+            this.privetusername.Size = new System.Drawing.Size(84, 20);
             this.privetusername.TabIndex = 20;
             this.privetusername.Text = " username";
             // 
@@ -142,13 +142,14 @@ namespace gachinaruto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.userpicture);
             this.Controls.Add(this.privetusername);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "ArticlesPage";

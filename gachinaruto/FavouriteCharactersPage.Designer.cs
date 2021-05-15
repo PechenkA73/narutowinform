@@ -65,7 +65,7 @@ namespace gachinaruto
             this.privetusername.Location = new System.Drawing.Point(1089, 117);
             this.privetusername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.privetusername.Name = "privetusername";
-            this.privetusername.Size = new System.Drawing.Size(99, 25);
+            this.privetusername.Size = new System.Drawing.Size(80, 20);
             this.privetusername.TabIndex = 10;
             this.privetusername.Text = "username";
             // 
@@ -87,7 +87,7 @@ namespace gachinaruto
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label1.Location = new System.Drawing.Point(269, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(335, 36);
+            this.label1.Size = new System.Drawing.Size(266, 29);
             this.label1.TabIndex = 11;
             this.label1.Text = "Любимые персонажи:";
             // 
@@ -124,7 +124,7 @@ namespace gachinaruto
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label2.Location = new System.Drawing.Point(791, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 20);
+            this.label2.Size = new System.Drawing.Size(91, 17);
             this.label2.TabIndex = 16;
             this.label2.Text = "Ваша почта:";
             // 
@@ -133,14 +133,14 @@ namespace gachinaruto
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.textBox1.Location = new System.Drawing.Point(795, 61);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 26);
+            this.textBox1.Size = new System.Drawing.Size(135, 23);
             this.textBox1.TabIndex = 17;
             // 
             // FavouriteCharactersPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
@@ -149,9 +149,11 @@ namespace gachinaruto
             this.Controls.Add(this.privetusername);
             this.Controls.Add(this.userpicture);
             this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "FavouriteCharactersPage";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Favourite characters page";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userpicture)).EndInit();
